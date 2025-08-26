@@ -77,14 +77,54 @@ Thus, the structured data can be a very complex tree of data.
 API responses *almost always* have structured data
 API requests *sometimes* have structurted data
 
+
+## JSON
+
+JSON is an acronym JavaScript Object Notation. JSON was originally created to hold structured data to be used in JavaScript. It is used for data for all kinds of applications. It is the most popular way of sending data for Web APIs.
+
+### Basic Data types
+
+* Strings – enclosed in a single or double quotation marks
+* Numbers – Integer or decimal, positive or negative
+* Booleans – true or false; no quotation marks
+* null – means "nothing"; no quotation marks
+* Arrays – lists in square brackets, comma-separated and can mix data types. For example [43, "bread", false, 67, null]
+
+#### Objects
+* Objects are JSON's dicitonaries
+* They are enclosed in curly brackets {}
+* Keys and values are separated by a colon :
+* Pairs are separated by commas
+* Keys and values can be any data type
+
+For example: {"red":209, "green":134, "blue":92}
+
+#### Nesting
+* Nesting Involves putting arrays and objects inside each other:
+* You can put arrays inside objects, objects inside arrays, arrays inside objects, etc.
+* Often a JSON file is one big object with lots of objects and arrays inside.
+
+#### JSON Examples
+
+Describing a song:
+```json
+{
+    "song":
+        {
+            "title": "Hey, Jude",
+            "artist": "The Beatles",
+            "musicians":
+                ["John Lennon", "Paul McCartney",
+                    "George Harrison", "Ringo Starr"]
+        }
+}
+```
+Menu description:
+![image](JSON-Example-Menu-Description.jpeg)
+
+## XML
+
+
+## In Conclusion
+
 (TBD) 
-
-## What are APIs?
-
-## Why are they important?
-
-## What is structured data?
-
-## Two common data formats: JSON and XML
-
-## Tools
