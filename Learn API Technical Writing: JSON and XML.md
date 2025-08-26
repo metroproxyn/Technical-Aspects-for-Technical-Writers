@@ -9,6 +9,12 @@ SDK – Software Development Kit (what developer need to write API)
 
 ### API Overview
 
+* API – Application Programming Interface
+* It defines how two pieces of software talk to each other
+* In this learning material, we are focusing on Web APIs
+  
+  ![image](img/WebAPIs.png)
+
 ### What is JSON and XML?
 
 ### How they are different?
