@@ -122,9 +122,52 @@ Describing a song:
 Menu description:
 ![image](JSON-Example-Menu-Description.jpeg)
 
-## Documenting JSON
+### Documenting JSON
 
-(TBD)
+This section covers:
+* Overall approach
+* JSON responses
+* JSON requests
+* How to handle:
+  * Nesting
+  * Default values
+  * Valid values
+  * Formats
+
+#### Description and Tables
+
+Start with a one sentence description.
+JSON details are best documented in one or more tables.
+* Columns include key names, description and type
+* Can also include additional information
+
+A table for JSON Responses:
+
+| Element | Description | Type | Notes |
+|---------|-------------|------|-------|
+|         |             |      |       |
+|         |             |      |       |
+|         |             |      |       |
+|         |             |      |       |
+
+* Element: The key of the key/value pair
+* Description: A sentence fragment, usually a descriptive noun
+* Type: number, string, Boolean, array or object
+* Notes: Additional information
+
+A table for JSON Requests:
+
+| Element | Description | Type | Required | Notes |
+|---------|-------------|------|----------|-------|
+|         |             |      |          |       |
+|         |             |      |          |       |
+|         |             |      |          |       |
+|         |             |      |          |       |
+
+The difference is that there is a new column called Required
+* Indicated whether you have or have not that element
+* Fill with either "Required" or "Optional"
+* Include deault value in Notes
 
 ## XML
 
