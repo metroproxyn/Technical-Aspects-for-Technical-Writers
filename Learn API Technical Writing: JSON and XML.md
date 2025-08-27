@@ -122,6 +122,10 @@ Describing a song:
 Menu description:
 ![image](JSON-Example-Menu-Description.jpeg)
 
+## Documenting JSON
+
+(TBD)
+
 ## XML
 
 
