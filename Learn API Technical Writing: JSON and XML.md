@@ -120,7 +120,7 @@ Describing a song:
 }
 ```
 Menu description:
-![image](JSON-Example-Menu-Description.jpeg)
+![image](img/JSON-Example-Menu-Description.jpeg)
 
 ### Documenting JSON
 
@@ -168,6 +168,74 @@ The difference is that there is a new column called Required
 * Indicated whether you have or have not that element
 * Fill with either "Required" or "Optional"
 * Include deault value in Notes
+
+#### Nesting
+
+There are two ways to handle nesting:
+* Indentation
+  * Best for cases where objects are not reused
+  * Takes up less space
+* Table for each object type
+  * Best for cases where objects are reused
+  * Takes up more space
+
+#### Example: Song JSON Documentation
+
+Represents an API description of the song above (and below)
+```json
+{
+    "song":
+        {
+            "title": "Hey, Jude",
+            "artist": "The Beatles",
+            "musicians":
+                ["John Lennon", "Paul McCartney",
+                    "George Harrison", "Ringo Starr"]
+        }
+}
+```
+  ![image](img/SongAPITable.jpeg)
+
+#### Example JSON: Describing a menu
+
+```json
+{
+  "menu": [
+    {
+      "header": "File",
+      "items": [
+        { "id": "Open", "label": "Open" },
+        { "id": "New", "label": "New" },
+        { "id": "Close", "label": "Close" }
+      ]
+    },
+    {
+      "header": "View",
+      "items": [
+        { "id": "ZoomIn", "label": "Zoom In" },
+        { "id": "ZoomOut", "label": "Zoom Out" },
+        { "id": "OriginalView", "label": "Original View" }
+      ]}
+  ]}
+
+```
+  ![image](img/MenuDescriptionTable.jpeg)
+
+#### Example JSON: Adding a Comment
+
+```json
+{
+  "comment": {
+    "userId": "pgruenbaum",
+    "discussionId": 964564445654,
+    "time": "2015-02-28 10:04:32",
+    "text": "Well said, Barbara!"
+  }
+}
+```
+**Note:** "time" is GMT and also optional. If not included, then it uses the current time when the request is received by the server.
+
+  ![image](img/CommentAPITable.jpeg)
 
 ## XML
 
