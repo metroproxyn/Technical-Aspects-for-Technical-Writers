@@ -284,6 +284,10 @@ XML files can be described with a schema. The schema describes the structure of 
 
 <mark>Often you want one set of tables that work for both JSON and XML </mark>
 
+For a few attributes, use the Notes column (as in the examples above). For many attributes, add an attribute column.
+
+One table per element type works well for XML. For requests, add a Request column.
+
 ## In Conclusion
 
 (TBD) 
