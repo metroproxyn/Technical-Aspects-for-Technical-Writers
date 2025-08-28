@@ -243,6 +243,44 @@ Represents an API description of the song above (and below)
 
 ## XML
 
+XML – eXtensible Markup Language. Like HTML:
+* Hypertext Markup Language
+* Used for creating websites
+* XML can be used for any kind of structured data
+
+Tags work like HTML: starts with <...> and ends with </...>. The start and end tags must match. Tag names must only be letters, numbers and underscores. Example: 
+```xml
+<artist>The Beatles</artist>
+```
+An empty tag can also end with />
+
+In addition to content, tags can have attributes. Attributes are key/value pairs and hold simple data (a string). Both are strings, but the keys do not have quotes. THis means they must be letters, numbers and underscores only. No spaces or puntuation characters.
+
+In most common designs, attributes are not used for data. They are used to indicate that some property about the data (metadata) For example:
+```xml
+<fileSize unit="kB">34.6</fileSize>
+```
+
+### Example XML: Song
+
+![image](img/XMLExampleSong.jpeg)
+
+### Example XML: Describing a menu
+
+![image](img/XMLMenuDescription.jpeg)
+
+You can pull comments into XML just like HTML. Comments start with "<! --" and end with "-->"
+
+### Namespaces
+
+YOu might have a tag name mena one thing in one contetx, but something else in a different context. For this, you use namespaces to uniquely identify them. The tag name has a "namespace:" prefix. For example: 
+```xml
+<sdkbridge:onlineCourse>
+```
+
+### Schemas
+
+XML files can be described with a schema. The schema describes the structure of the XML file. This is called XSD file (XML Schema Definition). XSD describes what the tags, attributes, and types are.
 
 ## In Conclusion
 
