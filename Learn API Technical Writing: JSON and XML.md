@@ -282,6 +282,8 @@ YOu might have a tag name mena one thing in one contetx, but something else in a
 
 XML files can be described with a schema. The schema describes the structure of the XML file. This is called XSD file (XML Schema Definition). XSD describes what the tags, attributes, and types are.
 
+<mark>Often you want one set of tables that work for both JSON and XML </mark>
+
 ## In Conclusion
 
 (TBD) 
