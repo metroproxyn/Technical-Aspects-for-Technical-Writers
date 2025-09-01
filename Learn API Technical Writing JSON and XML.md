@@ -1,8 +1,10 @@
 # Learn API Technical Writing: JSON and XML
 
-API – Application Programming Interface
+**API – Application Programming Interface**
 
-SDK – Software Development Kit (what developer need to write API)
+It defines how two pieces of software talk to each other.
+
+**SDK – Software Development Kit** (what developer needs to write an API)
 
 ## Introduction
 
