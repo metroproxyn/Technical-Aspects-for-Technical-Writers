@@ -17,3 +17,26 @@ REST is a category of Web APIs
   * Use token
   * Authority to make a request
 * OAuth: one of the most common authorisation platforms*
+
+
+(TBD)
+
+REST
+
+Requests
+
+Resources
+
+HTTP methods
+
+Query parameters
+
+Headers
+
+Authentication and Authorisation
+
+Responses
+
+API Reference Documentation
+
+Tools
