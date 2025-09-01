@@ -21,9 +21,7 @@ REST is a category of Web APIs
 
 (TBD)
 
-## Introduction
-
-### What is REST?
+## Introduction – What is REST?
 
 * **RE**presentational **S**tate **T**ransfer
 * It is a type of web API
@@ -48,11 +46,11 @@ A design pattern is a set of guidelines. For exampe, a house design that can be 
 * REST in its pure form is highly flexible, but not always easy to use.
 * Most RESTful APIs do not follow the pure design pattern.
 
-#### Requests and Responses
+### Requests and Responses
 
 ![image](img/REST-Requests-and-Responses.png)
 
-#### HTTP
+### HTTP
 
 Like all web APIs, REST uses HTTP (HyperText Transfer Protocol) to send messages.
 
@@ -60,7 +58,7 @@ Like all web APIs, REST uses HTTP (HyperText Transfer Protocol) to send messages
 * HTTP has different "verbs" it can use: GET, POST, DELETE, etc.
 * Secure HTTP (https) is also an option.
 
-#### Resources defined in the URL
+### Resources defined in the URL
 
 * A resource is a piece of data that represents something
 * If you are making a request about users, then the URL should have the word "users" in it.
@@ -68,15 +66,15 @@ Like all web APIs, REST uses HTTP (HyperText Transfer Protocol) to send messages
 * The URL can contain IDs to narrow information
 * For example, the URL to return information about user with ID 12345 might be: http:/api.example.com/users/12345
 
-#### Formats
+### Formats
 
 One of the REST features is that it is completely independent of the format. The data sent and returned can be of any format. JSON is the most common; XML is also widely used. Can be media types, like images, sound files, etc.
 
-#### Stateless
+### Stateless
 
 REST is stateless. In this case, "stateless" means that the server does not keep track of the state of the device. For example, pagination with "Load more" button in the web pages and browser keeps track and do all the math.
 
-#### SOAP comparison
+### SOAP comparison
 
 SOAP is the **S**imple **O**bject **A**ccess **P**rotocol. 
 * Previously the most common web API. 
@@ -84,21 +82,15 @@ SOAP is the **S**imple **O**bject **A**ccess **P**rotocol.
 * XML only.
 * Protocol instead of a design pattern. Thus, the design had to follow strict standards.
 
+### Review
 
-(TBD)
-
-Design Pattern !
-
-Resources !
-
-Stateless
-
-HTTP !
-
-Formats !
-
-Comparison to SOAP
-------------------
+* REST is a type of web API
+* It is a design pattern, not a protocol
+* It has requests and responses
+* Resourced are defined in the URL
+* It uses HTTP to send messages
+* It can use any data format
+* It does not keep track of the device's state
 
 (TBD)
 
