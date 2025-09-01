@@ -68,6 +68,21 @@ Like all web APIs, REST uses HTTP (HyperText Transfer Protocol) to send messages
 * The URL can contain IDs to narrow information
 * For example, the URL to return information about user with ID 12345 might be: http:/api.example.com/users/12345
 
+#### Formats
+
+One of the REST features is that it is completely independent of the format. The data sent and returned can be of any format. JSON is the most common; XML is also widely used. Can be media types, like images, sound files, etc.
+
+#### Stateless
+
+REST is stateless. In this case, "stateless" means that the server does not keep track of the state of the device. For example, pagination with "Load more" button in the web pages and browser keeps track and do all the math.
+
+#### SOAP comparison
+
+SOAP is the **S**imple **O**bject **A**ccess **P**rotocol. 
+* Previously the most common web API. 
+* Not actually all that simple.
+* XML only.
+* Protocol instead of a design pattern. Thus, the design had to follow strict standards.
 
 
 (TBD)
@@ -80,7 +95,7 @@ Stateless
 
 HTTP !
 
-Formats
+Formats !
 
 Comparison to SOAP
 ------------------
