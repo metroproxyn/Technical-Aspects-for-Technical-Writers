@@ -19,8 +19,6 @@ REST is a category of Web APIs
 * OAuth: one of the most common authorisation platforms*
 
 
-(TBD)
-
 ## Introduction – What is REST?
 
 * **RE**presentational **S**tate **T**ransfer
@@ -91,6 +89,57 @@ SOAP is the **S**imple **O**bject **A**ccess **P**rotocol.
 * It uses HTTP to send messages
 * It can use any data format
 * It does not keep track of the device's state
+
+
+## Requests
+
+A simple HTTP request looks like:
+
+```json
+
+POST http://api.example.com/user?source=ios&device=iphone
+
+Accept: application/json
+Content-type: application/json
+
+{
+  "name": "Aleks Mashanski",
+  "email": "maszanski@yahoo.com"
+}
+
+```
+
+### The Anatomy of the Request
+
+* POST – method
+* URL – http://api.example.com/user
+* Query parameters – ?source=ios&device=iphone
+* Headers – in our case, Accept and Content-type. There are standard headers to use for HTTP requests
+* Body – in the {}. Only have a body for POST and PUT
+
+#### Method
+
+Method is the action that you are taking.
+
+Examples
+
+* **GET:** Return data from the server
+* **POST:** Create a new resource on the server
+* **DELETE:** Delete a resource from the server
+* **PUT**
+
+#### URL
+
+URL stands for Uniform Resource Locator. Comes with the server information.
+
+#### Query parameters
+
+* Usually contains information on how the data should be returned
+* Key/value pairs
+* You can sometimes see these in browser address bars
+* Example: 
+  * http://api.example.com/user?sort-name&dir=ascend
+  * Query parameters used to say: "Return sorted by name in ascending order."
 
 (TBD)
 
