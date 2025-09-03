@@ -141,6 +141,10 @@ URL stands for Uniform Resource Locator. Comes with the server information.
   * http://api.example.com/user?sort-name&dir=ascend
   * Query parameters used to say: "Return sorted by name in ascending order."
 
+## Resources
+
+A resource represents a data concept.
+
 (TBD)
 
 REST
