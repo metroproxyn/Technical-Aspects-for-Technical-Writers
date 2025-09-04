@@ -143,26 +143,88 @@ URL stands for Uniform Resource Locator. Comes with the server information.
 
 ## Resources
 
-A resource represents a data concept.
+A resource represents a data concept. For example:
+* Learning Management System (LMS).
+  * Teatcher, student, course, assignment
+* Flight Reservation System
+  * Airline, passenger, flight, ticket
+* Restaurant Review System
+  * Restaurant, user, review, menu
+  
+### Resources and URLs
+
+In REST, the resource is defined in the URL. THis means URL contains singular nouns. For example:
+* http://api.example.com/restaurants
+* http://api.example.com/courses/39314
+* http://api.example.com/airlines/984289/flight
+
+#### Speifying one or more resources
+
+* Resource objects that exist have an ID
+* Use IDs in the URL to specify a particular resource object
+* If no ID – To get data on all restaurants:
+  * GET http://api.example.com/restaurants
+* To get data the restaurant with ID = 93839
+  * GET http://api.example.com/restaurants/93839
+
+### Endpoints
+
+An endpoint means the URL for a resource
+Examples:
+* http://api.example.com/restaurants
+* http://api.example.com/courses/{course-id} – *endpoint*
+* http://api.example.com/airlines/{airline-id}/flight
+
+### Resources can contain resources
+
+* You can have a hierarchy of resources
+* For example, airlines have flights that are specific to them
+* To get all flights for the airline with ID = 53239:
+  * GET http://api.example.com/airlines/53239/flight
+* To get data on the flight 457 for that airline:
+  * http://api.example.com/airlines/53239/flight/457
+
+### Review
+
+* A resources represents a data concept
+* Resources are specified in the URL
+* Use IDs to specify one particular resource object
+* Resources can be containe din other resources
+
+
+## HTTP methods
+
+* As part of the HYperText Transfer Protocol, there are different types of requests:
+  * If you type an address into a browser, that is a GET
+  * If you fill out a form in a browser, that is a POST
+
+### What can you do with a resource? (CRUD)
+
+* **C**reate – POST
+* **R**etrieve – GET
+* **U**pdate – PUT
+* **D**elete – DELETE
+
+What is an HTTP method?
+
+CRUD
+
+GET
+
+POST
+
+PUT
 
 (TBD)
 
-REST
+## Query parameters
 
-Requests
+## Headers
 
-Resources
+## Authentication and Authorisation
 
-HTTP methods
+## Responses
 
-Query parameters
+## API Reference Documentation
 
-Headers
-
-Authentication and Authorisation
-
-Responses
-
-API Reference Documentation
-
-Tools
+## Tools
