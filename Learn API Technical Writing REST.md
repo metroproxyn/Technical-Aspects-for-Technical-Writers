@@ -197,6 +197,7 @@ Examples:
 * As part of the HYperText Transfer Protocol, there are different types of requests:
   * If you type an address into a browser, that is a GET
   * If you fill out a form in a browser, that is a POST
+  * There are actually several more
 
 ### What can you do with a resource? (CRUD)
 
@@ -205,15 +206,56 @@ Examples:
 * **U**pdate – PUT
 * **D**elete – DELETE
 
-What is an HTTP method?
+#### GET
 
-CRUD
+* Retrieves data
+* Has no body
+* Use IDs in the URL to specify a particular object
+* To get data on all restaurants:
+  * `GET http://http://api.example.com/restaurants`
+* To get data the restaurant with ID = 93473:
+  * `GET http://http://api.example.com/restaurants/93473`
 
-GET
+#### POST
 
-POST
+* Create a new resource object
+* Data for creating object is in the body
+* To create a new restaurant object:
+  * `POST http://http://api.example.com/restaurants` 
 
-PUT
+```json
+{
+  ...data for new object
+}
+```
+
+#### PUT
+
+* Modifies an existing resource object
+* Data for updating the object is in the body
+* Use IDs in the URL to specify a particular object
+* To modify a restaurant object with ID = 93473:
+  * `PUT http://http://api.example.com/restaurants/93473`
+
+```json
+{
+  ...data for updated object
+}
+```
+
+#### DELETE
+* Deletes an object
+* Has no body
+* Use IDs in the URL to specify a particular object
+* To modify a restaurant object with ID = 93473:
+  * `DELETE http://http://api.example.com/restaurants/93473`
+  
+> **Important Note:** Not all requests fit this model! 
+
+* Sometimes a request does not have to do with a resource 
+* For example:
+  * Request turns on an appliance
+  * Request sends an email message
 
 (TBD)
 
