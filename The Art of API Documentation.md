@@ -31,15 +31,48 @@ API documentation can be divided into 2 parts:
   - HTTP Requests and Responses
   - Classes, methods, properties, etc.
 
+### Why is Conceptual Material Important?
+
+- Developers need to read something that immediately communicates why they should spend time with an API
+- Developers need to be able to get started easily, otherwise they will give up (?)
+- Figuring out how to do common tasks can be difficult by just looking at the reference material
+
+#### Writers are important
+
+- Developers aren't great at reference material, but...
+- Developers tend to be really bad at conceptual material
+  - They naturally focus on "how" and forget "why"
+  - They are too close to the API to see the big picture
+  - Longer paragraphs tend to be harder for them
+
+### Conceptual Material Consists of ...
+
+Typically:
+- Overview
+- Getting Started
+- Tutorials
+- Sample Code
+
+Each of these will be discussed in more details later.
+
+#### Overview
+
+#### Getting Started
+
+#### Tutorials
+
+#### Sample Code
+
 (TBD)
 
 What the course covers:
 
-Introduction
+*Introduction
 API Conceptual Material
 Getting Started
 Tutorials
-Sample Code
+Sample Code*
+
 Tools for REST APIs
 Hands-on Exercises for Tools
 Finding a First Project
