@@ -65,14 +65,31 @@ Each of these will be discussed in more details later.
 
 #### Getting Started
 
-
+- Lead people through a simple task
+- Web APIs
+  - Registration
+  - Get an app key
+  - Authorization
+  - Doing something simple
+- PLatform APIs
+  - Downloading the SDK
+  - Setting up your IDE
+  - Doing something simple
 
 #### Tutorials
 
-
+- Common Tasks
+- Step-by-step
+- Screenshots, if they make sense
+- Start with basic tasks, move to advanced
 
 #### Sample Code
 
+- Simple and short tasks that actually work
+- Developers like to be able to copy and modify them
+- Common tasks
+- Well-commented
+- Sample code is different that production code
 
 
 (TBD)
