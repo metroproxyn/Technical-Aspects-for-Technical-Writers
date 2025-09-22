@@ -57,11 +57,23 @@ Each of these will be discussed in more details later.
 
 #### Overview
 
+- Explain why to use the API
+- Requirements
+- Key concepts (for example, for a Learning Management System, explain the roles of student, teacher or administrator)
+- Workflow (meaning what is the order of steps taken to do common tasks)
+- Architecture diagrams and/or data model
+
 #### Getting Started
+
+
 
 #### Tutorials
 
+
+
 #### Sample Code
+
+
 
 (TBD)
 
