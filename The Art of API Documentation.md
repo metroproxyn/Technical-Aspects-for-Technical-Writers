@@ -91,6 +91,70 @@ Each of these will be discussed in more details later.
 - Well-commented
 - Sample code is different that production code
 
+## API Overview Material
+
+Overview material is important for the following reasons:
+
+- Developers need to read something that immediately communicates:
+  - What can the APi do?
+  - What is required to use the API?
+  - Is it well-designed?
+- They want to quickly figure out: will this solve the problem that they have? If they can't figure out that quickly, they will move on and use something else.
+- Once they are ready to learn, a high-level description will orient them.
+
+### Explain "Why", not just "How"
+
+- Most of the documentation will explain how to do something
+- The overview must explain why you would use it
+  - Descrive key features
+  - Provide a few use cases
+
+### Requirements
+
+- Provide a list of what is required
+- Get this list from the development team
+- For Web APIs
+  - This usually isn't included
+  - However, for some APIs, you need a separate authentication server
+- For Platform APIs:
+  - What programming languages are supported?
+  - What OS, SDKs, IDEs, etc. are required?
+
+### Key Concepts
+
+- APIs typically have important concepts that should be described
+- This usually depends on the "domain" – what does the API do?
+- Write a paragraph or two for each concept
+- Examples:
+  - Learning Management System: Roles, classes, grades, etc.
+  - Online Banking: Accounts, transactions, etc.
+
+### Architecture
+
+`(Architecture image shoud be here as an example)`
+
+* Explain the major pieces of the API
+* Explain how these pieces fit together
+
+### Workflow
+
+- Often, to complete a task, several API calls need to be made
+- Workflow described the order of these tasks
+- Example: Play a song from a playlist
+  - 1. Get a list of all playlists and their IDs. Let the user select a playlist
+  - 2. Get the list of songs and their IDs in the playlist using the playlist ID. Let the user select a song.
+  - 3. Request the sound file for the song using the song's ID.
+
+### Diagrams
+
+  ![image](img/DiagramExample.jpeg)
+
+- Architecture Diagrams
+  - How do various pieces fit together?
+- Workflow diagrams
+  - What happens when?
+- Get diagrams from development team
+  - They may need some clean-up
 
 (TBD)
 
