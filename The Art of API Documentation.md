@@ -131,6 +131,8 @@ Overview material is important for the following reasons:
 
 ### Architecture
 
+Explain how the various pieces fit together.
+
 `(Architecture image shoud be here as an example)`
 
 * Explain the major pieces of the API
