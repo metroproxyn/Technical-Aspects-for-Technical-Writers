@@ -158,6 +158,44 @@ Explain how the various pieces fit together.
 - Get diagrams from development team
   - They may need some clean-up
 
+## "Getting Started" section 
+
+Why do you need a Getting Started section? 
+
+- In the early stages, developers are still deciding whether to use the API
+- The fact is, learning something new is intimidating
+- The Getting Started section can make the API seem much less intimidating and more inviting.
+
+For proper Getting Started, we need the simplest program that demonstrates some feature of the API.
+
+- API experts have a metric on how easy it is to get started with an API TTHW ("Time to Hello World")
+  - This is the time it takes for a developer to do a Hello World task from scratch.
+- Documentation is an important piece of this
+  - There are other pieces, too: like how easy is it for a developer to register and download
+
+### Structure
+
+- Step-by-step instructions
+- Lots of screenshots
+
+The good example of this practice is the [Saleforce API Getting Started](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/api_rest.pdf) guide or [Stripe API Get Started](https://docs.stripe.com/get-started) guide.
+
+### Web API Getting Started
+
+Here is what you want in a getting started section for Web API:
+
+- Registration
+- Getting an app key
+- Making one or two HTTP requests that return a response
+- Typically not something that requires complex authorisation (like three-legged OAuth). Try to avoid this
+
+### Platform API Getting Started
+
+- DOwnloading the SDK
+- Setting up your IDE
+- Creating an app that does a simple task
+  - Often you provide code that they can copy-and-paste
+
 (TBD)
 
 What the course covers:
