@@ -191,14 +191,22 @@ Here is what you want in a getting started section for Web API:
 
 ### Platform API Getting Started
 
-- DOwnloading the SDK
+- Downloading the SDK
 - Setting up your IDE
 - Creating an app that does a simple task
   - Often you provide code that they can copy-and-paste
 
 ## Tutorials
 
-What is the purpose of tutorials?
+What is the purpose of tutorials? (Introduction)
+
+### Subject Matter
+
+### Structure
+
+### Screenshots
+
+### How many do you need?
 
 (TBD)
 
