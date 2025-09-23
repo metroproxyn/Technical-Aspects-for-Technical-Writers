@@ -196,6 +196,10 @@ Here is what you want in a getting started section for Web API:
 - Creating an app that does a simple task
   - Often you provide code that they can copy-and-paste
 
+## Tutorials
+
+What is the purpose of tutorials?
+
 (TBD)
 
 What the course covers:
