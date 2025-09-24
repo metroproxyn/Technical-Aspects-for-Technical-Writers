@@ -170,3 +170,23 @@ This is a very popular "Docs-as-Code" method. You can set up a GitHub Action to 
 3.  **Configure GitHub Pages:** In your repository settings under "Pages", set the source to deploy from the `gh-pages` branch (which the action will create and manage for you).
 
 Now, every time you push a change to your `openapi.yaml` file on the `main` branch, the documentation website will automatically update.
+
+---
+
+## Limitations & When to Consider Alternatives
+
+While Redoc is an excellent tool, it's important to understand its limitations to choose the right tool for the job.
+
+### Key Limitations of Open-Source Redoc:
+
+1.  **No "Try It Out" Console:** The most significant difference compared to Swagger UI. If you need users to test API endpoints interactively directly from the documentation, you would need to add a custom solution or use a different tool. (Note: Redocly's paid version includes this feature).
+2.  **Single Page Only:** Redoc generates a single, self-contained HTML page. This is great for simplicity but can be limiting if you need a full documentation portal with multiple pages, articles, guides, and tutorials alongside the API reference.
+3.  **Limited Search:** The default search (Ctrl+F) works, but it's not as powerful as dedicated search solutions like Algolia that you might find in larger documentation portals.
+
+### When to Look for Alternatives (like Docusaurus, MkDocs, or Redocly's Portal):
+
+- **You need more than just an API reference:** If your documentation requires extensive tutorials, "Getting Started" guides, conceptual articles, or a blog, a static site generator (SSG) is a better choice. You can often integrate Redoc *into* a site built with an SSG, but the SSG manages the overall structure.
+- **You manage multiple APIs:** For a complex developer portal that needs to present documentation for many different APIs, a more robust solution like Redocly's paid platform might be necessary to manage them efficiently.
+- **Interactive tutorials are a must:** If hands-on, interactive API calls are a core part of your user onboarding, Swagger UI or a platform with an integrated API console might serve you better out-of-the-box.
+
+**Conclusion:** Redoc is the perfect choice for generating a clean, professional, and easy-to-read API reference. For building comprehensive developer portals, it's best used as one component within a larger documentation ecosystem.
