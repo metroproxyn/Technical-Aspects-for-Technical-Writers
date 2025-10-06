@@ -198,15 +198,50 @@ Here is what you want in a getting started section for Web API:
 
 ## Tutorials
 
-What is the purpose of tutorials? (Introduction)
+Reference material shows developers the details, but it can be hard to figure out what to do. Tutorials, on the other hand, lead them through common tasks. This gretaly reduces support costs.
 
 ### Subject Matter
 
+- Cover common tasks
+- Examples:
+  - Learning Management System: Adding a student to a course
+  - Online Banking: Getting account information
+  - Photo sharing: Uploading an image
+- Work with the Project Manager to determine what these tasks area is
+
 ### Structure
+
+- Same structure as Getting Started
+  - Getting Started *is* a tutorial!
+- Step-by-step instructions
+- Sample HTTP requests or code they can copy and paste
+- As many screenshots as you can, but only if they really show something
 
 ### Screenshots
 
-### How many do you need?
+- Web APIs
+  - Not that many screenshots needed – often, none
+  - Only if the tutorial involves doing something with the developer portal
+
+- Platform APIs
+  - Again, not many screenshots
+  - Show if you need to do something with the IDE
+  - Show if the tutorial does something visual
+
+### How many do you need
+
+- Depends on the complexity of the API
+- For most APIs, 3 to 5 is sufficient
+  - Developers should be able to figure it out on their own after that
+- Some API are so complex, you need a lot more than that
+
+### Conclusion
+
+- Tutorials reduce support costs
+- Tutorials cover common tasks, which the project manager should help you with
+- Write step-by-step instructions
+- Screenshots if you can, but there usually will not be many
+- Typically 3 to 5 tutorials is sufficient, but more if the API is very complex
 
 (TBD)
 
