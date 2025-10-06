@@ -245,23 +245,97 @@ Reference material shows developers the details, but it can be hard to figure ou
 
 ## Sample Code
 
+This section gives you guidelines for writing good sample code and talks about how to apply them.
+
 ### The importance of sample code
+
+- Developers really want it
+  - Surveys have shown it
+  - Survey: Search "sdk bridge documentation survey"
+- May developers learn bets by example
+- They can copy, paste and modify
+  - Much faster that doing it from scratch
 
 ### Guidelines
 
+- Prioritise the languages in which your API users code
+- Relevant information should be grouped together
+- Clarity is more important than efficiency
+
+**Note:** Good production code is *not* the same as good smaple code.
+
 ### Web APIs vs. Platform APis
 
-### Choosing languages
+- Web APIs
+  - Can ba called from nearly any language
+  - Often sample code is not included: only sample requests and responses
+  - Need to choose which languages to have code for
+  - Typically fairly simple samples
+
+- Platform APIs
+  - In the language of the SDK
+  - Can be simple or complex
+
+### Web APIs: Choosing languages
+
+- Reach out to project manager or developer and ask what languages they use
+- Do as many languages as you have budget for, but prioritise on the one that is most used
+- Sometimes, content systems allow you to have tabs for each language
+  - Example: stripe.com
 
 ### Illustrating workflow
 
+- Think about what your API does and how the sample code could demonstrate common tasks
+- Often sample code illustrates a series of API calls
+  - Web API example: results from one HTTP call are used for paramneters in a second HTTP call
+  - Platform API example: Call to inialise the SDK followed by calls to take actions, followed by a call to shut down the SDK
+
 ### Hard-coded values
+
+- Never use hard-coded value sin production code
+  - Strings, integersm hexadecimal values, etc.
+- At the same time, you *should* use them in sample code
+- "Group relevant information together" means using hard-coded values in sample code
+  - Otherwise, developers must scroll to the top to see the value
+  - Lose train of thought
+- Exception: App keys and access tokens, since they will not be what the developer uses
 
 ### Comments
 
+- Comments are good for both production and sample code
+- In sample code, they are critical
+- Every class, function, or method should have at least one comment line explaining what it is or what it does
+- Use comments anywhere that the code is not obvious, especially if you need to document a work-around
+- In general, have a line of comments at least every 5 to 10 lines of code
+
 ### Meaningful names
 
+- For both production and sample code, variable, class, and member names should be clear
+- In sample code, you should take this idea farther than in production code
+- Remember: clarity is more important that efficiency
+- Long, unwieldy names are fine: they add clarity
+- Never use menaingless names like "foo" or one-letter variable names
+
 ### Object-oriented programming
+
+- Object-oriented programming is a way of organising code
+- It is very desirable for production code, but not for sample code
+- The reason is OOP distributes information between inherited classes
+  - Does not group relevant information together, which is one of our guidelines
+- If you use Object-oriented programming in your sample code, this means the developer have to hunt for information, and potentially lose trail of thought
+
+### Conclusion
+
+- Developers really like sample code because they can copy and modify it
+- Three guidelines: prioritise languages, group information, clarity over efficiency
+- Web APIs will require prioritising languages
+- Sample code should illustrate workflow of common tasks
+- Use hard-coded values
+- Use plenty of comments: one line for every 5-10 lines of code
+- Use meaningful names: long in fine
+- Don't use object-oriented programming
+
+Source: Gruenbaum sample code
 
 
 (TBD)
