@@ -243,6 +243,27 @@ Reference material shows developers the details, but it can be hard to figure ou
 - Screenshots if you can, but there usually will not be many
 - Typically 3 to 5 tutorials is sufficient, but more if the API is very complex
 
+## Sample Code
+
+### The importance of sample code
+
+### Guidelines
+
+### Web APIs vs. Platform APis
+
+### Choosing languages
+
+### Illustrating workflow
+
+### Hard-coded values
+
+### Comments
+
+### Meaningful names
+
+### Object-oriented programming
+
+
 (TBD)
 
 What the course covers:
