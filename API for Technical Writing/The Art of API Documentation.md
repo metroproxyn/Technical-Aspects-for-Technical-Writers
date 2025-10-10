@@ -339,6 +339,21 @@ Source: Gruenbaum sample code
 
 ## Tools for Calling REST APIs
 
+Tools are useful for trying out REST requests. No programming required. Making requests with tools will give you a better feel for how the REST API works. 
+The biggest advantage is that you can try out requests and answer questions without having to ask the development team. 
+- For example, is a parameter required? Try making a request without it and see what happens.
+
+### GUI Tools
+
+- GUI – Graphical User Interface
+- Advantages:
+  - Visual tool is easy to use
+  - Formats responses nicely
+  - Keeps track of history
+- Available for many operating systems and browsers
+- Usually free
+- For example, Postman
+
 How can tools help?
 
 GUI tools
