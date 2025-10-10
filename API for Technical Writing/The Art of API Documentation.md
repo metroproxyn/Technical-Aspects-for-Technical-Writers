@@ -337,6 +337,13 @@ This section gives you guidelines for writing good sample code and talks about h
 
 Source: Gruenbaum sample code
 
+## Tools for Calling REST APIs
+
+How can tools help?
+
+GUI tools
+
+Command-line-tools (cURL)
 
 (TBD)
 
