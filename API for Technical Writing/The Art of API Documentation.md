@@ -352,7 +352,25 @@ The biggest advantage is that you can try out requests and answer questions with
   - Keeps track of history
 - Available for many operating systems and browsers
 - Usually free
-- For example, Postman
+- For example, Postman (TBD: provide with the example)
+
+### Command-line Tools
+
+- Type a command into a console or terminal
+- Get the results back in the console or terminal
+- Easy to include in documentation, so the developers can easily use them
+- cURL:
+  - The only one that people really use
+  - Often called "curl"
+  - Comes as part of Mac OS
+  - Requires some set-up for Windows
+
+### Conclusion
+
+- Tools let you try out REST requests to see how they work
+- No programming required
+- GUI tools give you a nice visual interface
+- cURL is a command-line tool that is easy to document
 
 How can tools help?
 
