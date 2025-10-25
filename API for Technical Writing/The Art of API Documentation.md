@@ -371,28 +371,41 @@ The biggest advantage is that you can try out requests and answer questions with
 - No programming required
 - GUI tools give you a nice visual interface
 - cURL is a command-line tool that is easy to document
+  
+## Breaking Into the Field 
 
-How can tools help?
+> (TBD: Probably will be separate topic in the future)
 
-GUI tools
+- If you are new to API documentation, how can you convince someone to hire you?
+- You need experience, but how to get it?
+- One way: document open source projects as a volunteer
+  - Then you can point to it in your resume
 
-Command-line-tools (cURL)
+### Open Source Projects
 
-(TBD)
+- Open source community is growing very quickly
+- Anyone can contribute to open source projects, assuming they are approved by the owners
+- Sites exist that are dedicated to hosting open source projects
+  - GitHub is the most popular
+- Open source projects are notorious for being badly documented!
 
-What the course covers:
+### GitHub
 
-*Introduction
-API Conceptual Material
-Getting Started
-Tutorials
-Sample Code*
+- Git is a type of version control software
+  - It saves every version of a file you create
+  - Makes it easy for many people to collaborate
+- GitHub is a repository based on git
+- Software Developers really like it!
+- Documentation is created using Markdown
+  - Markdown is a markup language like HTML (but much simplier)
+  - But much simpler
+  - You can learn it in about 15 minutes
 
-Tools for REST APIs
-Hands-on Exercises for Tools
-Finding a First Project
-Review
+### How Do You Choose a Project?
 
-Web-based and command-line tools for REST APIs
-
-Outline
+- What do you like to do?
+  - Example: chess
+- What technology interests you?
+  - Example: computer vision
+- What knowledge you already have?
+  - Example: appoitment scheduling
