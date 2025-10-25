@@ -409,3 +409,10 @@ The biggest advantage is that you can try out requests and answer questions with
   - Example: computer vision
 - What knowledge you already have?
   - Example: appoitment scheduling
+
+### Conclusion
+
+- Documenting open source projects is a great way to get experience
+- Anyone can contribute to oen source projects, and they desperately need documentation
+- To find a project, think about hobbies, technologies that interest you, and knowledge that you already have
+- Look in GitHub to find projects and contact the main contributors
