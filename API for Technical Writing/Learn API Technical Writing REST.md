@@ -361,7 +361,93 @@ Here are three ways that the data format can be specified:
 
 ### Conclusion
 
+- Query parameters carry extra data
+- Typically they modify the data you get back
+- Key/value pairs
+- To document, create a table with columns:
+  - Parameter, Description, Type, Required, Notes
+- Type can be more specific than string, such as date, URL, etc.
+
 ## Headers
+
+The following material covers:
+
+- What HTTP headers are
+- Usage of headers to specify formats
+- Usage of headers for authorization
+- How to document headers
+
+Headers are part of HTTP. They have key/value pairs. Usually, the key is a standard HTTP header key, but not always. Headers are used for things like browser cookies. 
+In REST, headers most often used for:
+- Specifying format
+- Authorization
+
+### Formats
+
+- HTTP defines special headers to specify data formats
+- You can actually use a different format when sending vs. receiving data
+
+### Format of data you send
+
+- This refers to the data for the POST or PUT body
+- Header key
+  - Content-Type
+- Header value
+  - application/json for JSON
+  - application/xml for XML
+  - Can also use this for media, like image/jpeg
+
+For example,
+`Content-Type: application/json`
+
+### Format of data you receive
+
+- This refers to the data in the response
+- Header key
+  - Accept
+- Header value
+  - application/json for JSON
+  - application/xml for XML
+  - Can also use this for media, like image/jpeg
+
+For example,
+`Accept: application/json`
+
+### More complex formats
+
+- Some APIs have the formats not only specify JSON or XML, but also the format of the resource.
+  - In other words, the JSON or XML for each resource is considered a different format
+- The following format is an example of a header value with a format for a product resource and a version number 1
+
+`application/json;vnd.example.product.json+v1`
+
+### Documenting Headers
+
+- Headers will be similar for all API requests
+  - GET and DELETE will not need Content-Type headers
+  - Unless you have a different format type for each resource
+- Create a table with these columns:
+  - Header name
+  - Description
+  - Values
+
+### Sample Header Documentation
+
+| Header Name | Description | Required | Values |
+| :--- | :--- | :--- | :--- |
+| Bearer | Access token | Required | See Authorization section |
+| Content-Type | Format of request data | Optional | application/json, application/xml. Default is application/json. |
+| Accept | Format of response data | Optional | application/json, application/xml. Default is application/json. |
+
+### Conclusion
+
+- Headers are a standard part of HTTP
+- Typicallu used to specify format and for authorization
+- Format can be specific for resource
+- Common header names:
+  - Content-Type, Accept, Bearer
+- To document, create a table with columns:
+  - Header name, description, values
 
 ## Authentication and Authorisation
 
