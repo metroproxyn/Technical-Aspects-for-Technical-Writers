@@ -257,8 +257,6 @@ Examples:
   * Request turns on an appliance
   * Request sends an email message
 
-(TBD)
-
 ## Query parameters
 
 ## Headers
