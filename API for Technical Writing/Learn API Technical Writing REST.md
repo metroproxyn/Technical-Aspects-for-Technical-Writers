@@ -126,7 +126,7 @@ Examples
 * **GET:** Return data from the server
 * **POST:** Create a new resource on the server
 * **DELETE:** Delete a resource from the server
-* **PUT**
+* **PUT** Modifies an existing resource object
 
 #### URL
 
@@ -258,6 +258,108 @@ Examples:
   * Request sends an email message
 
 ## Query parameters
+
+This topic is about query parameters and how to document them. You will know what are query parameters, see the examples of how they used and learn how to document them.
+
+- Query parameters contain additional data that you can send to the server.
+- Typically used to modify or filter the data that is returned
+- You see these in browser fairly often
+
+Although for the purposes of documentation it is better to think of query parameters and URLs as different.
+
+### Sometimes considered part of the URL
+
+- If URL has a question mark in it
+  - Query parameters are after the question mark
+- Key and value separated by equals sign
+- Key/value pairs separated by ampersand
+
+For instance,
+`http://api.example.com/users?limit=10&offset=5`
+
+### Example: Pagination
+
+- What if you GET could return a lot of data?
+- Break it up into several pieces through pagination
+- First ask for first 10 items, then next 10, etc.
+- Use query parameters to say what number to start at and how many
+- Example: First 10
+  `GET http://api.example.com/users?limit=10&offset=0`
+- Example: Next 10
+  `GET http://api.example.com/users?limit=10&offset=10`
+
+### Example: Filter
+
+- Query parameters are also used for filtering data, so you only receive the items you want
+- Example: Only return restaurants whose type is "pizza"
+  `GET http://api.example.com/restaurant?type=pizza`
+
+### Example: Format
+
+- Query parameters are also used to specify the data format
+  - Note: this technique has fallen out of favor. Instead, usually the header is used to specify format.
+- Example: Use XML
+  - `GET http://api.example.com/restaurant?format=xml`
+
+#### Specifying the format
+
+Here are three ways that the data format can be specified:
+
+- Header
+  - Will be explained in the topic below. This is considered the best way to do it *(TBD: link)*
+- Query parameter
+  `GET http://api.example.com/restaurant?format=json`
+- Suffix (not used much anymore)
+  `GET http://api.example.com/restaurant.json`
+
+### Example: Authorization
+
+- Sometimes query parameters are used for authorizaiton
+- For example, a key like "token" or "APIkey"
+  - `GET http://api.example.com/restaurant?token=35f373e23723c`
+- More common is to use headers for this information
+  - Explained in the Authentication and Authorisation topic *(TBD: link)*
+
+### Documenting Query Parameters
+
+- Because they are key/value pairs, it is very similar to documenting JSON or XML. Refer to the Learn API Technical Writing JSON and XML topic for additional information.  *(TBD: link)*
+- Create a table with these columns:
+  - Parameter
+  - Description
+  - Type
+  - Required
+  - Notes
+
+### Query Parameters Types
+
+- Unlike JSON, all values are technically strings
+- So for type, you may want to be more specific:
+  - Integer
+  - Date
+  - URL
+- If the values are limited to a set, put that in the notes.
+
+### U.S. Weather Example
+
+- date
+  - The date of the forecast, in format YYYY-MM-DD. Optional. Default is today's date
+- days
+  - The number of days. Required.
+- zip. 
+  - The zip code (postal code) that says where the forecast is for. Required.
+- language
+  - The language for the returned data. Two-letter language code. Optional. Default is "en". Valid values are "en", "es", and "fr".
+
+**Query Parameters:**
+
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| date | The first day of the forecast | date | Optional | Format is YYYY-MM-DD. Default is today's date. |
+| days | The number of days of forecast to return | integer | Required | |
+| zip | The zip code for the location of the forecast | integer | Required | |
+| language | The language of the returned data | string | Optional | Two-letter language format. Default is en. Valid values: en, es, fr |
+
+### Conclusion
 
 ## Headers
 
