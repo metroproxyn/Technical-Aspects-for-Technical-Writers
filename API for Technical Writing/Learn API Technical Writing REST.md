@@ -449,7 +449,19 @@ For example,
 - To document, create a table with columns:
   - Header name, description, values
 
-## Authentication and Authorisation
+## Authentication and Authorization
+
+### Why is security important?
+
+### Authentication vs. authorization
+
+### App keys
+
+### OAuth
+
+### Use of headers
+
+### How to document authentication and authorization
 
 ## Responses
 
