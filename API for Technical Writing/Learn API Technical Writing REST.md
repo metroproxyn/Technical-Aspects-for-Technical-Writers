@@ -451,17 +451,50 @@ For example,
 
 ## Authentication and Authorization
 
+The goal is to give you a basic information about the subject, so that you are in a better position to document it.
+
 ### Why is security important?
 
-### Authentication vs. authorization
+- Only registered developers should have access
+  - Can affect revenue
+  - Limits access (e.g., the number of requests per month)
+  - Allows companied to collect important data on how APIs is used
+- User informaiton should remain private
+  - User data can be sensitive
+  - No different than browser access
+
+### Authentication vs. Authorization
+
+- Authentication
+  - A user provides valid username and password
+  - This typically results in the return of an access token
+- Authorization
+  - When you make an API request, you send the server an access token
+  - This token determines what API requests you can make
 
 ### App keys
 
+- Also known as "API keys"
+- For each app that a developer creates, they register that app in the company's developer portal
+- The developer portal then gives them an "App Key", which is typically a string of numbers and characters
+- This key is sent to the server in exchange for an access token so that each API reques is associated with the registered app
+
 ### OAuth
+
+- There are many ways to handle security
+- OAuth is a popular open protocol
+  - Very flexible
+  - Very complex
+- Details at http://oauth.net/
+- Most APIs use OAuth 2.0
 
 ### Use of headers
 
+-
+
 ### How to document authentication and authorization
+
+-
 
 ## Responses
 
