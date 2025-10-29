@@ -488,9 +488,41 @@ The goal is to give you a basic information about the subject, so that you are i
 - Details at http://oauth.net/
 - Most APIs use OAuth 2.0
 
+#### Valet key
+
+- OAuth uses a concept like a valet key
+- Different API users have different privileges
+  - For example: admin, teatcher, student
+- Each API user has an access token
+  - The token tells the server what the API user has access to
+  - For example, a student cannot create a course
+  - Note: tokens are temporary
+
+#### One-legged vs. Three-legged
+
+- OAuth has several ways to handle authorization
+- Most common for REST are referred to as one-legged and three-legged
+- One-legged:
+  - Used when no sensitive user data involved. For example, in Linkedin, every user can see public profiles.
+  - Send API key => return access token; Send API request with access token => return API response
+- Three-legged:
+  - Used when need to protect user data. For example, Linkedin connections. 
+  - Significantly more complex than one-legged
+  - Three pathways of data are involved: Client device, Authentication server and API server
+    - Authentication server is different from API server; Could be even a different company
+- Some API don't have users, so always use one-legged
+
+#### Grant Types
+
+- There are different flows of information, depending on how authorization is granted
+- These are called "grant types"
+- Two most common:
+  - Authorization code: Used with server-side applications
+  - Implicit: Used with mobile apps and web applications
+
 ### Use of headers
 
--
+- 
 
 ### How to document authentication and authorization
 
