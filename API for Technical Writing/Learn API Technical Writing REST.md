@@ -520,13 +520,34 @@ The goal is to give you a basic information about the subject, so that you are i
   - Authorization code: Used with server-side applications
   - Implicit: Used with mobile apps and web applications
 
-### Use of headers
+### Headers
 
-- 
+- Access tokens are most commonly put in a header
 
 ### How to document authentication and authorization
 
--
+- Need a section on Authorization
+  - Describe step-by-step how the process works to get an access token
+    - The URL of the authentication server
+    - How to get the access token from the server's redirect URL
+  - Then describe how to pass the tken to server
+  - Tokens often expire after a fixed amount of time. Describe how to get a new token if this happens.
+
+- How to use token:
+  - Include token information in the appropriate table
+  - Header or query parameter
+  - Might want this table for each API request
+
+### Conclusion
+
+- Authentication is getting valid username and password
+- Authorization is telling server that user has access
+- App keya are obtained bu developer on the developer portal
+- OAuth is a popular, complex, open standard
+- One-legged OAuth for no user data
+- Three-legged OAuth for protected user data
+- Grant types: Authorization code and Implicit
+- Document with an Authorization section
 
 ## Responses
 
