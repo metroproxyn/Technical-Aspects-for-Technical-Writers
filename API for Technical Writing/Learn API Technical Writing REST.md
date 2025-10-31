@@ -549,7 +549,101 @@ The goal is to give you a basic information about the subject, so that you are i
 - Grant types: Authorization code and Implicit
 - Document with an Authorization section
 
-## Responses
+## Request body and responses
+
+Structured data is organized in terms of objects and lists that contain other objects and lists.
+
+### Structured data
+
+- Request body
+  - POST and PUT only
+- Response body
+  - All methofs, usually
+  - Sometimes DELETE does not return a response body
+- Usually JSON or XML
+
+#### Documenting structured data
+
+- Create a table that lists:
+  - Element, Destination, Type and Notes
+  - For requests, also add Required
+
+### URLs in Responses
+
+- Sometimes there are URLs in the responses
+- These are URLs to other resources
+- Example request:
+  - http://api.example.com/restaurant
+- This returns all restaurants
+  - That could be a huge amount of data
+  - So only return limited data plus links to more data
+
+#### If no response body
+
+- Just say it, instead of the table:
+  - No response body in returned.
+
+### Objects section
+
+- Sometimes many API requests return the same type of data
+- In this case, response information and sample responses are redundant
+- Create an Objects section of the docs which contain responses body tables
+  - Examples: restaurant, menu, address, etc.
+- Link to the Object section from the request section
+
+### Errors
+
+- Errors are returned by one of two ways
+  - HTTP status codes
+  - Elements in the response body
+- HTTP status codes are part of the HTTP protocol
+  - A status code is always returned with the response
+  - They were designed for web pages, but have been repurposed for APIs
+  - They contain some information
+  - But you will want to document them more completely
+
+### HTTP Status Codes
+
+- They have a code and a description
+- Examples:
+  - 200 – OK: Successful GET, PUT or DELETE
+  - 201 – Created: Successful POST
+  - 401 – Unauthorized: Bad access token
+  - 404 – Not found: Bad URL
+
+#### Documenting HTTP Status Codes
+
+- Create a table with Code, Description, and Notes
+- Often one per API, but can be one per request
+
+| Code | Description | Notes |
+| :--- | :--- | :--- |
+| 200 | OK | API request was successful |
+| 401 | Unauthorized | Access token is not valid |
+| 415 | Unsupported media type | Only JSON and XML are supported formats |
+
+### Errors in Response Bodies
+
+- Document like other response elements
+- Create a similar table as HTTP status codes
+
+```json
+{
+  "errorCode": 15,
+  "errorMessage": "Class size limit reached"
+}
+```
+
+### Conclusion
+
+- Structured data can be found in the request and response bodies
+- How to document is covered in JSON/XML class
+- URLs in the response point to another resource objects 
+- You may want an Object section
+- Errors are returned using HTTP status codes
+  - Document with a table
+- Errors can also be returned with response elements
+  - Document like other elements, but add an error table
 
 ## API Reference Documentation
 
