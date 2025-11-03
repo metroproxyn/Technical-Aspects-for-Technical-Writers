@@ -21,10 +21,10 @@ REST is a category of Web APIs
 
 ## Introduction – What is REST?
 
-* **RE**presentational **S**tate **T**ransfer
-* It is a type of web API
-* REST has several features
-* Design pattern, not a protocol*
+- **RE**presentational **S**tate **T**ransfer
+- It is a type of web API
+- REST has several features
+- **Design pattern, not a protocol**
 
 Design pattern vs protocol
 
