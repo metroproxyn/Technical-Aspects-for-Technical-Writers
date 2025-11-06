@@ -2,7 +2,7 @@
 
 Swagger and the Open API Specification are ways to define an API
 
-## API Definition. What are APIs?
+## What are APIs?
 
 - **A**pplication **P**rogramming **I**nterface
 - It defines how two pieces of software talk to each other
@@ -62,6 +62,25 @@ Swagger provides several tools:
   - Swagger CodeGen: Generates code in popular languages for using your API
   - Swagger UI: generates documentation from OAS files
   - SwaggerHub: Hosted platform for designing and documenting APIs
+
+## API Definition File
+
+- API definition file is a file that describes everything you can do with an API
+  - Note: "API" means a collection of related requests
+- Server locaiton
+- How security is handled (i.e., authorization)
+- All the available requests in that API
+- All the different data you can send in a request
+- What data is returned
+- What HTTP status codes can be returned
+
+### The Anatomy of a Request
+
+![image](/img/AnatomyoftheAPIRequest.jpeg)
+
+#### URL
+
+- Example request URL: https://api.example.com/vs/user
 
 Course overview:
 
