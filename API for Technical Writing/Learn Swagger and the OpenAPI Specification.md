@@ -62,3 +62,19 @@ Swagger provides several tools:
   - Swagger CodeGen: Generates code in popular languages for using your API
   - Swagger UI: generates documentation from OAS files
   - SwaggerHub: Hosted platform for designing and documenting APIs
+
+Course overview:
+
+API Definition
+
+YAML
+
+Open API Specification
+
+Creating Documentation
+
+Using Swagger
+
+Using JSON
+
+Alternatives to Swagger and Open API Specification
