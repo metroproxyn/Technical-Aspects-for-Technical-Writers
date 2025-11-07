@@ -80,7 +80,74 @@ Swagger provides several tools:
 
 #### URL
 
-- Example request URL: https://api.example.com/vs/user
+- Example request URL: https://api.example.com/v2/user
+- Scheme
+  - https
+- Host
+  - api.example.com
+- Base path
+  - /v2
+- Path
+  - /user
+
+#### Method
+
+- The HTTP method describes what kind of action to take
+- GET, POST, PUT, DELETE, etc.
+
+#### Parameters
+
+- Example:
+  - https://api.example.com/v2/user/{user-id}/connections?degrees=2
+- Path Parameters
+  - {user-id}
+- Query Parameters
+  - degrees
+
+#### Request Body
+
+- For some methods (POST, PUT, etc.) you can specify a request body, often in JSON
+- The body is treated as a parameter
+- You specify a schema for the request body
+
+#### Response Body
+
+- In REST, the response body can be anything, but is most often structured data, such as JSON
+- The response body is included in a response object
+- The response object has a schema to describe the structured data
+- You can have a separate response object for each HTTP status code returned
+
+### Security
+
+APIs often use security.
+
+- Security means authentication and authorization
+- Can be:
+  - None
+  - Basic Auth
+  - API key
+  - OAuth
+
+### Documentation
+
+- Human-readable description of elements
+- For generating documentation
+- Add a "description" section for:
+  - The API
+  - Each operation (path and method)
+  - Each parameter
+  - Each response element
+
+### Getting the information to create an OAS file
+
+- If you asked to create an OAS file, how do you find the information?
+- Developers can provide rough documentation
+- Developers can provide sample requests and responses:
+  - Most common
+- You can figure it out from the code
+  - Requires strong coding skills
+- For exercises, sample requests and responses will be provided (see the attachments folder)
+
 
 Course overview:
 
