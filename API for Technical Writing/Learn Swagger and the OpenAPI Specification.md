@@ -148,6 +148,8 @@ APIs often use security.
   - Requires strong coding skills
 - For exercises, sample requests and responses will be provided (see the attachments folder)
 
+## YAML
+
 
 Course overview:
 
