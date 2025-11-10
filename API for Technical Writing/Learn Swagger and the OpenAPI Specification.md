@@ -150,6 +150,75 @@ APIs often use security.
 
 ## YAML
 
+We will tlak about how YAML is used with the Open API Specification, then what YAML is, and go over the basic rules of YAML.
+
+### Open API Specification
+
+- The Open API Specification (OAS) uses structured data (JSON/XML) for its definition files
+- You can use one of two structured data formats: YAML or JSON
+- For this learning material, we will primarly use YAML
+
+### What is YAML?
+
+- YAML is an acronym which stands for "YAML Ain't Markup Language" or "Yet Another Markup Language." The former is meant to underscore that the language is intended for data rather than documents.
+- Used for data, not content
+- Compared to JSON and XML, it minimizes characters
+- It's most often used for configuration files, rather than files pssed over web, like JSON
+
+### Key/value pairs
+
+- Key value pairs are indicated by a colon followed by a space
+  - For example, two key pairs: `date: 2025-11-10, firstName: Aleks`
+  - One for date, and one for first name
+
+### Levels
+
+- Levels are indicated by white space indenting
+  - Cannot be a tab indent. You should only use spaces
+
+### Types
+
+- Types are determinted from context
+- Example: 
+  `part_no: A4786` – string
+  `description: Photoresistor` – string
+  `price: 1.47` – float
+  `quantity: 4` – integer
+
+### Quotes
+
+- In general, you don't need quotes around string
+- Expection: something that will be interpreted as a number or boolean
+- Quotes can be either single ' or double "
+
+### Lists
+
+- Use a dash (-) to indicate a list item
+- You don't need to declare the list
+
+### Multi-line strings
+
+- Because there are no quotation marks on strings, you need special characters for multiple strings
+- "|" means preserve lines and spaces
+- ">" means fold lines
+- There are variations: | -, | +, etc.
+
+![image](/img/YAMLMultiLineStrings.jpeg)
+
+### Comments
+
+- Comments are denoted with the #
+- Everything after # is ignored
+
+### Schemas
+
+- Although not officialy part of YAML, OAS uses references for schemas
+  - Used for request and response bodies
+- Will go into more detail in a latter lesson
+- Use `$ref` to indicate a reference
+- Typically put the schema in a `definitions` section
+
+![images](/img/YAMLSchemaExample.jpeg)
 
 Course overview:
 
