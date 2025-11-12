@@ -220,6 +220,105 @@ We will tlak about how YAML is used with the Open API Specification, then what Y
 
 ![images](/img/YAMLSchemaExample.jpeg)
 
+
+## Open API Specification Basics
+
+> Notes about OAS 3 and the Swagger editor
+
+This learning material describes OAS 2. A newer version, OAS 3, is now available, and many companies are using it. At some point the author intend to update the course for OAS 3, but it might not happen for a while.
+
+This article describes the differences between the two. You may want to look at this once you have completed the course. https://blog.restcase.com/6-most-significant-changes-in-oas-3-0/
+
+Also: in the videos from the [mentioned Udemy course](https://www.udemy.com/course/learn-swagger-and-the-open-api-specification/learn/lecture/8677186#overview), the Swagger editor URL is listed as https://editor2.swagger.io/. That has changed, and it is now https://editor.swagger.io/
+
+
+### Open API Specification File
+
+- Choose an example and build a file
+- Company: example.com
+- Service for uploading and sharing photos
+- API base URL (example): 
+  - https://api.example.com/photo
+
+![images](/img/Swagger_API_Example.jpeg)
+
+### Adding a Request
+
+Let's define requests for getting photo albums.
+Requests will have:
+
+- URL endpoint
+- HTTP Method
+- Path parameters
+- Query parameters
+- Also (covered later):
+  - Request Body
+  - Responses
+
+### Example with query parameters
+
+`GET https://api.example.com/photo/album?start=2025-17-26&end=2025-10-12`
+
+```yaml
+# Endpoints
+paths:
+  # Photo album
+  /album:
+    # Get one or more albums
+    get:
+      # Query parameters
+      parameters:
+        # Starting date
+        - name: start
+          in: query
+          required: false
+          type: string
+
+        # Ending date
+         - name: end
+           in: query
+           required: false
+           type: string
+```
+
+![images](/img/Swagger_Example_PathParameter.jpeg)
+
+### Data types
+
+The data type can have several values:
+
+- boolean
+- integer
+- number
+- string
+- array
+
+### Custom headers
+
+- Custom headers are threated as parameters
+- Standard headers (authorization, content format) are handled elsewhere
+
+```yaml
+# Customer level
+- name: Access-level
+  in: header
+  required: false
+  type: string
+```
+
+! Documentation is added using the **description** key
+### Swagger Editor
+
+Swagger provides an editor for OPen API specification files: 
+
+-  https://editor.swagger.io/
+
+
+
+
+
+*** 
+
 Course overview:
 
 API Definition
