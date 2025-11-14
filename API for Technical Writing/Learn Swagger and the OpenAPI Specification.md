@@ -307,25 +307,68 @@ The data type can have several values:
 ```
 
 ! Documentation is added using the **description** key
+
 ### Swagger Editor
 
 Swagger provides an editor for OPen API specification files: 
 
 -  https://editor.swagger.io/
 
+## Schemas
 
+This section will talk about what a schema is and how to use references in an OpenAPI specification file.
 
+### Request and Response Bodies
 
+- Certain kinds of requests have extra data
+  - POST, PUT, etc.
+- Extra data called the request body
+- Typically data is formatted in JSON (or sometimes XML)
+- Nearly all responses return a response body
+- Also typically formatted in JSON
+
+### What is a schema?
+
+- The schema indicates the structure of the data
+- OAS schema object is based off the JSON Schema Specification
+  - http://json-schema.org/
+- The main thing that the schema defines are:
+  - The keys in key/value pairs
+  - Type of data in the values
+- Can contains many levels
+
+### $ref
+
+- $ref is a special OAS key that indicates that the value is a reference to a structure somewhere else in the YAML file
+
+For example:
+
+![images](/img/ref.jpeg)
+
+### Request Body
+
+- Under **parameters**:
+- **name** just for reference (not shown in docs)
+- **in** – set to body
+- **required** – typically set to true
+- **schema**:
+  - Add a level
+  - Key of $ref
+  - Value of the reference path, in quotes
+
+![images](/img/ExampleRequestBody.jpeg)
+
+### Schema section
+- Create a key called **definitions** at the end of the file
+- Add a level and give it the name from the **$ref** value
+- Add a **properties** key
+- For each top level element in the JSON, add a key of its name.
+- Add a **type** key that says what type of data it is
+- Add other keys for other data (more later)
+
+![images](/img/ExampleSchema.jpg)
 
 *** 
-
-Course overview:
-
-API Definition
-
-YAML
-
-Open API Specification
 
 Creating Documentation
 
