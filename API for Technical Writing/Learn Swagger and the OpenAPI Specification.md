@@ -368,6 +368,72 @@ For example:
 
 ![images](/img/ExampleSchema.jpg)
 
+### Schema objects
+
+- You can add other objects sa vakues
+- Simply use a **type** of **object**
+- Then add a new level with **properties**:
+- And continue just like you did before
+
+### Schema objects with $ref
+
+- As you can imagine, this can add a lot of identation
+- So you can use $ref from within your definition
+
+### Schema array
+
+- You can also add arrays
+- Simply use a **type** of **array**
+- Then add a key of **items**
+- And define the **type** and any other properties
+
+### Schema array with $ref
+
+- For a more complex type, use $ref for the array items
+
+### Required
+
+- In requests, you can specify that certainb elements are required or optional
+- Use the **required** key for this
+  - Contains a list of all properties that are required
+
+### Response Body
+- Under **response:**, under the response code
+- **schema:**
+  - Add a level
+  - Key of $ref
+  - Value of the reference path, in quotes
+- If the response is an array instead of an object, then add:
+  - type: array
+- **Note:** you can have different schemas for different response codes
+
+### allOf
+
+- In the prvious example, album and newAlbum had a lot of duplication
+- Can use the **allOf** key to combine several objects into one:
+
+![images](/img/allOf.jpeg)
+
+### Headers and Examples
+
+- Responses can also have custom headers
+- You can include example bodies in OAS files
+- Refer to the Open API Specification on how these work
+
+### Form Data
+
+- Sometimes the request body uses form data instead of JSON
+- For form data, each parameter is a property
+- **in** key has value **formData**
+
+```yaml
+parameters:
+  - name: firstFileName
+    in: formData
+    required: true
+    type: string
+```
+
 *** 
 
 Creating Documentation
