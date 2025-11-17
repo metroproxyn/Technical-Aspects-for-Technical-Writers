@@ -434,6 +434,48 @@ parameters:
     type: string
 ```
 
+## Open API Specification Continued
+
+This section will cover security, error conditions, content types (JSON, JPEG, etc.) and operation IDs.
+
+### Security
+
+- Security means what kind of authentication or authorization is required
+- Authentication: the user has correct username and password
+- Authorization: the user has access to this API and data
+
+#### Security types
+
+OAS handles 4 security types:
+
+- **None**
+  - Used for getting publically available information
+- **API key**
+  - Indicates that the app has permission to use the API
+- **Basic Authentication**
+  - Username and password is included in a header (not secured)
+- **OAuth**
+  - Complex issuance of temporary token
+
+#### How security is indicated
+
+- **Each operation has a security key**
+  - Contains an array of security definition objects
+  - Often just one element in the array
+- **Security Definitions**
+  - The file contains a **securityDefinitions** key
+  - Typically at the end
+  - Contains security objects
+- **Security object**
+  - Contains information needed for that type of security
+
+### API key
+
+- Add security key to each operation
+  - Use dash to indicate an array
+  - Create name for definition and use empty brackets, since no data is needed
+
+
 *** 
 
 Creating Documentation
