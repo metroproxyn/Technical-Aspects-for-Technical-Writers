@@ -471,10 +471,165 @@ OAS handles 4 security types:
 
 ### API key
 
-- Add security key to each operation
+- **Add security key to each operation**
   - Use dash to indicate an array
   - Create name for definition and use empty brackets, since no data is needed
+- **Add security definition**
+  - Add definition for that name in securityDefinition section
+  - **type: apiKey**
+  - **name:** name of the header or query parameter to be used
+  - **in: query** or **header**
 
+#### API key example
+
+- Put a security key in the **get** section and **securityDefinitions** at the end of the file
+
+```yaml
+
+security:
+  - api_key: [ ]
+```
+
+and
+
+```yaml
+
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: application-key
+    in: header
+```
+
+Also token can be used in the "name" parameter.
+
+### Basic authentication
+
+- Add security key to an operation
+  - Use dash to indicate an array
+  - Create name for definition and use empty bracket, since no data is needed
+- Add security definition
+  - Add definition for that name in securityDefinition section
+  - **type:basic**
+
+#### Basic authentication example
+
+- Put a security key in the get section and securityDefinition at the end of the file
+  
+```yaml
+
+security:
+  - basic_auth: [ ]
+```
+
+At the bottom of the file is
+
+```yaml
+
+securityDefinition:
+  basic_auth:
+    type: basic
+```
+### OAuth
+
+- Add security key to request, like before
+  - However, now you add scopes in the array
+- Add security definition
+    - Add definition for that name in security Definition section
+    - **type: oauth2**
+    - **authorizationUrl:** URL where credentials are entered
+    - **tokenUrl:** URL for the token
+    - **flow:** OAuth 2 flow (**implicit**, **password**, **application** or **accessCode**.)
+    - **scopes:** list of scopes with descriptions
+
+#### OAuth example
+
+- Put a security key in the **get** section and **securityDefinition** at the end of the file
+
+```yaml
+
+securityDefinition:
+  - oauth_example:
+    - write: albums
+```
+
+```yaml
+
+- securityDefinitions:
+    oauth_example:
+      type: oauth2
+      authorizationUrl: http://example.com/authenticate
+      flow: implicit
+      scopes:
+        write:albums: modify albums in your account
+        read:albums: read your albums
+```
+
+### Errors
+
+- Errors are simply different response codes
+- Often APIs return a special structure with errors
+- Example 401 (Unauthorized) code returned:
+  - *{"errorCode": 13, "message": "Username not found"}*
+- Should include schema for every potential status code
+
+#### Error Example
+
+```yaml
+responses:
+  # Response code
+  200:
+    description: Successful response
+  401:
+    description: Unauthorized
+    schema:
+      $ref: '#/definitions/error'
+```
+
+### Content Types
+
+- Content types indicate the format of the data in the request and response bodies
+- This is done through the **Content-Type** header
+- You can specify this for:
+  - The whole API
+  - Individual operations
+- Use the **consumes** and **produces** keys
+  - **consumes** for requests, **produces** for responses
+  - Use the **Content-Type** value (for example, **application/json**)
+
+#### Example Content-Type
+
+```yaml
+# URL data
+host: api.example.com
+basePath: /photo
+schemes:
+  - https
+
+consumes:
+  - application/json
+produces:
+  - application/json
+```
+
+### Operation ID
+
+- Although it doesn't show up in the documentation, you can optionally add an operation ID to each request
+- Some tools will use this
+
+```yaml
+paths:
+  # Photo albums
+  /album:
+    # Get one or more albums
+    get:
+      operationId: getAlbums
+      
+      # Query parameters
+      parameters:
+        #Starting date
+        - name: start
+```
 
 *** 
 
