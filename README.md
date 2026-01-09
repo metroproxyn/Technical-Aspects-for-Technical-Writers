@@ -31,8 +31,8 @@ The goal is to provide a clear and concise knowledge base to help you level up y
 ### 2. API Documentation Tools
 *Tools for creating, publishing, and managing API documentation.*
 
-- [Redoc](/02-api-documentation-tools/redoc.md)
-- [Redocly](/02-api-documentation-tools/redocly.md)
+- [Redoc](02-api-documentation-tools/redoc.md)
+- [Redocly](02-api-documentation-tools/redocly.md)
 - [Swagger UI](/02-api-documentation-tools/swagger-ui.md)
 - [Static Site Generators: Docusaurus](/02-api-documentation-tools/docusaurus.md)
 
@@ -48,7 +48,7 @@ The goal is to provide a clear and concise knowledge base to help you level up y
 ### 4. AI in Technical Writing
 *AI tools and workflows for modern technical writing.*
 
-- [The System Analyst Role](./06-related-roles/system-analyst.md)
+- [Specialized Tools](/04-ai-in-technical-writing/specialized-tools.md)
 
 ### 5. Enterprise & Collaboration Tools
 *Common tools in a corporate environment.*
