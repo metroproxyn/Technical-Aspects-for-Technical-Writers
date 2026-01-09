@@ -21,9 +21,12 @@ The goal is to provide a clear and concise knowledge base to help you level up y
 ### 1. Foundations
 *Core concepts every technical writer should know.*
 
-- [REST API Principles](./01-foundations/rest-api.md)
-- [Data Formats: JSON & XML](./01-foundations/json-and-xml.md)
-- [The "Docs-as-Code" Methodology](./01-foundations/docs-as-code-methodology.md)
+- [API Documentation Structure](/01-foundations/API%20Documentation%20Structure.md)
+- [REST API Principles](/01-foundations/Learn%20API%20Technical%20Writing%20REST.md)
+- [Data Formats: JSON & XML](./01-foundations/Learn%20API%20Technical%20Writing%20JSON%20and%20XML.md)
+- [Swagger and OpenAPi Specification](/01-foundations/Learn%20Swagger%20and%20the%20OpenAPI%20Specification.md)
+- [The Art of API Documentation](/01-foundations/The%20Art%20of%20API%20Documentation.md)
+- [The "Docs-as-Code" Methodology](./01-foundations/docs-as-code-methodology.md) (TBD)
 
 ### 2. API Documentation Tools
 *Tools for creating, publishing, and managing API documentation.*
