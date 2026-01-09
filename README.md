@@ -31,10 +31,10 @@ The goal is to provide a clear and concise knowledge base to help you level up y
 ### 2. API Documentation Tools
 *Tools for creating, publishing, and managing API documentation.*
 
-- [Redoc](./02-api-documentation-tools/redoc.md)
-- [Redocly](./02-api-documentation-tools/redocly.md)
-- [Swagger UI](./02-api-documentation-tools/swagger-ui.md)
-- [Static Site Generators: Docusaurus](./02-api-documentation-tools/docusaurus.md)
+- [Redoc](/02-api-documentation-tools/redoc.md)
+- [Redocly](/02-api-documentation-tools/redocly.md)
+- [Swagger UI](/02-api-documentation-tools/swagger-ui.md)
+- [Static Site Generators: Docusaurus](/02-api-documentation-tools/docusaurus.md)
 
 ### 3. The Developer Ecosystem (TBD)
 *Understanding the tools and platforms developers use every day.*
