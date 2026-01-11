@@ -67,6 +67,65 @@ Raw Markup files are good for editing but need transformation into polished webs
 
 Visual Studio Code is still my main tool. It’s free, flexible, and fits documentation work almost out of the box, such as Markdown preview, Git integration, and a huge extension ecosystem cover most day-to-day needs. With a couple of plugins, you can even preview static site generators locally. There are newer alternatives like Cursor, but VS Code’s ecosystem and maturity still make it the most practical choice for documentation work.
 
+(TBD)
+
+## The Workflow
+
+Now that you have the tools prepared, let's walk through a typical Docs-as-Code workflow.
+
+**Step 1.** Create a branch. Start by branching off the main repo. Use ```git checkout -b feature/new-guide``` to isolate your changes. This prevents disrupting the live docs.
+
+   
+**Step 2.** Write content in you code editor. Here is the simple documentation work that you usually do. Add text, images, code snippets, etc. Preview locally to catch the possible issues.
+
+   
+**Step 3.** Commit and push.Stage your changes with ```git add .```, commit with a descriptive message, for example, ```git commit -m "Add section on API endpoints"```. After that, push to the remote by ```git push origin feature/new-guide```. This uploads your work for review.
+
+   
+**Step 4.** Pull Request (PR) and Code Review. Create a PR on GitHub or GitLab. Describe your changes and link to related issues or tasks. Reviewers (your manager or SME) treat it like code: they are checking for clarity, accuracy, grammar, and style. Discussions happen inline, leading to possible revisions or greenflaging to publication. The collaboration here ensures high quality.
+
+   
+**Step 5.** Merge and Automatic Publication (Deployment). Once approved, merge the PR. CI/CD pipelines (more on the next section) automatically build the site and deploy it. Your updates go live instantly, with no manual intervention.
+
+
+This workflow scales from solo projects to large teams, fostering accountability and rapid iterations. There is nothing fancy here. It’s the same flow developers already use every day, just applied to documentation.
+
+## Automation and Quality (Testing Your Docs)
+
+Docs-as-Code really shows its value when you start treating documentation bugs the same way you treat code bugs. Use the following tools to enforce rules automatically:
+
+- **Vale:** A customizable linter for prose. Define style guides (e.g., avoid passive voice) and run it on your files.
+
+- **Markdownlint:** Specifically for Markdown, it catches formatting errors like inconsistent headings or trailing spaces.
+
+Last but not least: Broken links that are documentation equivalent of runtime errors. Tools like ```awesome-lint``` or built-in Static Site Generators checkers scan for dead URLs. Run them periodically to maintain integrity.
+
+**Recommended:** Integrate these into your Code Editor or CI/CD: for real-time feedback.
+
+## Pros and Cons
+
+No methodology is perfect. Let's weigh the benefits against the challenges to help you decide if Docs-as-Code fits your team.
+
+### Pros
+
+- Versioning and History: Every change is tracked, making rollbacks easy and audits straightforward.
+
+- Collaboration with Developers: Since docs are in Git, developers are far more likely to review and improve them.
+  
+- Quality Assurance: Automation catches issues early, resulting in more accurate and consistent content.
+  
+- Reusability: Plain text allows easy reuse across formats (e.g., web, PDF) and tools.
+
+- Scalability: Handles massive projects without performance hits, as seen in open-source giants.
+
+### Cons
+
+- Setup Overhead: Initial toolchain configuration (e.g., SSG themes, CI pipelines) takes time and expertise.
+
+- Tool Fragmentation: Choosing the right SSG can overwhelm beginners, and maintenance falls on the team. 
+
+- Maintenance: You are responsible for maintaining the build tools and pipelines, not just the text of documentation.
+
 ## Conclusion
 
 Docs-as-Code works because it removes the sometimes artificial gap between code and documentation. When both follow the same processes, documentation stops being an afterthought and starts evolving naturally with the product.
