@@ -1,4 +1,4 @@
-# CI/CD: Automating Your Workflow Like a Pro
+# CI/CD Pipelines: Automating Your Workflow Like a Pro
 
 CI/CD is one of those terms you hear everywhere in software teams, usually wrapped in a lot of technical jargon. For writers, technical communicators, or even hobbyist bloggers working with Docs-as-Code, it can sound like something meant “for developers only.”
 
