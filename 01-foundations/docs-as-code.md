@@ -100,7 +100,7 @@ Docs-as-Code really shows its value when you start treating documentation bugs t
 
 Last but not least: Broken links that are documentation equivalent of runtime errors. Tools like ```awesome-lint``` or built-in Static Site Generators checkers scan for dead URLs. Run them periodically to maintain integrity.
 
-**Recommended:** Integrate these into your Code Editor or CI/CD: for real-time feedback.
+**Recommended:** Integrate these into your Code Editor or CI/CD: for real-time feedback. See the [CI/CD](03-developer-ecosystem/ci-cd.md) material for more information on that topic.
 
 ## Pros and Cons
 
