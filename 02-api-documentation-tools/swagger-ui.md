@@ -131,10 +131,10 @@ You may also consider these best practices for getting the most out of Swagger U
 
 The most popular and effective alternative tools are:
 
-- Redoc: Better for readability with a three-pane layout; great for public APIs. See the [my article on Redoc](/02-api-documentation-tools/Redoc.md) for additional information on that tool.
-- Stoplight Elements: Design-first with collaboration features.
-- Mintlify: Customizable for internal portals, developer-friendly.
-- Postman: More for testing but includes doc generation.
+- **Redoc:** Better for readability with a three-pane layout; great for public APIs. See the [my article on Redoc](/02-api-documentation-tools/Redoc.md) for additional information on that tool.
+- **Stoplight Elements:** Design-first with collaboration features.
+- **Mintlify:** Customizable for internal portals, developer-friendly.
+- **Postman:** More for testing but includes doc generation.
 
 In 2026, API documentation is still trending toward AI-assisted generation, GraphQL support, and improved accessibility. Swagger evolves with AI integrations for spec auto-creation and better LLM compatibility. I'd expect more hybrid tools combining Swagger's interactivity with modern UIs in the near future.
 
