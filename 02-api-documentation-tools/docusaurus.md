@@ -23,9 +23,45 @@ Here is the comparison table of Docusaurus and other SSGs. Jekyll was taken as a
 
 ## How Does Docusaurus Work?
 
-Docusaurus operates as a Node.js-based generator, compiling content into static assets. It uses Markdown/MDX files for docs, with frontmatter for metadata, such as titles or slugs. Configuration happens via ```docusaurus.config.js```, defining themes, plugins, and presets.
+Docusaurus operates as a Node.js-based static site generator, compiling Markdown/MDX content into static assets deployable anywhere. It uses React for client-side rendering, enabling SPA-like navigation without full page reloads.
 
-For generating the site, run ```npx docusaurus build``` to process files: parse Markdown, apply React wrappers, and output optimized HTML/JS. For dev, ```npx docusaurus start``` provides hot-reloading.
+**Basics**
+
+Content lives in Markdown (.md) or MDX (.mdx) files, where MDX allows embedding JSX for React components (e.g., import a custom < Tabs> component). Frontmatter in YAML format at the file top handles metadata:
+
+```yaml
+---
+title: My Page
+slug: /my-page
+description: A brief overview
+---
+```
+
+Configuration is centralized in ```docusaurus.config.js``` (or .ts), exporting an object with site metadata, themes, plugins, and presets:
+
+```js
+module.exports = {
+  title: 'My Docs',
+  url: 'https://example.com',
+  baseUrl: '/',
+  themes: ['@docusaurus/theme-classic'],
+  plugins: ['@docusaurus/plugin-docs'],
+};
+```
+
+**Generating the Site**
+
+The build process parses files via Babel and Remark, applies React wrappers for layout (e.g., adding sidebars), and outputs optimized HTML, JS bundles, and CSS. Run ```npx docusaurus build``` to generate the ```/build``` directory with static files. For development, ```npx docusaurus start``` spins up a Webpack dev server on localhost:3000 with hot module replacement (HMR) for instant updates. Builds leverage SWC for faster compilation, reducing times by up to 70% compared to Babel alone.
+
+**Key Components**
+
+- Docs Plugin (@docusaurus/plugin-docs): Manages /docs folder content. It auto-generates sidebars from file structure (e.g., folders become categories), supports versioning (e.g., version: '2.0' in frontmatter), and enables pagination for long docs lists. Example config: docs: { sidebarPath: 'sidebars.js', routeBasePath: '/' }.
+- Blog Plugin (@docusaurus/plugin-blog): Handles /blog posts with date-based slugs, RSS/Atom feeds, and tags. Supports truncation for previews and authors metadata.
+- Pages Plugin (@docusaurus/plugin-pages): Creates custom routes with pure React components in /src/pages, e.g., a landing page at /.
+- Themes: Core is @docusaurus/theme-classic, providing Infima CSS for styling, Algolia/DocSearch integration, navbar/footer customization, and dark/light mode toggling via localStorage.
+- Presets: @docusaurus/preset-classic bundles docs, blog, and theme plugins for one-line setup: presets: [['classic', { docs: { ... } }]].
+
+This plugin-based architecture, built on Webpack and React Router, greatly ensures scalability. Sites with 10,000+ pages build in under 5 minutes on modern hardware.
 
 ## Installation and Setup
 
