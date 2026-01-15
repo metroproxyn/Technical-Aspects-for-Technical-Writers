@@ -47,23 +47,33 @@ The same approach applies to the doc-related services, such as running multiple 
 
 To build a foundational understanding of Docker, it is essential to explore its core components in more detail. These concepts form the backbone of how Docker operates, enabling efficient containerization. Below, each is expanded with definitions, practices, and applications tailored for documenting container-based systems.
 
-Docker
+**Docker**
 
-Images
+**Images**
 
-Containers
+**Containers**
 
-Dockerfile
+**Dockerfile**
 
-Volumes
+**Volumes**
 
-Networks
+**Networks**
 
-Docker Compose
+**Docker Compose**
 
 ## How Docker Works: A Simple Workflow
 
 Understanding Docker's workflow is key to grasping its practical application. This section outlines a step-by-step process from installation to management, providing a clear path for beginners while highlighting integration opportunities for technical documentation.
+
+**Install Docker**
+
+**Build an Image**
+
+**Run a Container**
+
+**Manage Containers**
+
+**Push and Pull Images**
 
 ## Basic Docker Commands
 
