@@ -67,6 +67,19 @@ Understanding Docker's workflow is key to grasping its practical application. Th
 
 ## Basic Docker Commands
 
+Here's a quick reference table of essential commands:
+
+| Command | Description | Example |
+| :--- | :--- | :--- |
+| `docker pull <image>` | Download an image from a registry | `docker pull nginx` |
+| `docker build -t <name> .` | Build an image from a Dockerfile | `docker build -t my-app .` |
+| `docker run <options> <image>` | Create and start a container | `docker run -it ubuntu bash` (interactive shell) |
+| `docker ps` | List running containers | `docker ps -a` (include stopped ones) |
+| `docker stop <container>` | Stop a running container | `docker stop my-container` |
+| `docker rm <container>` | Remove a stopped container | `docker rm my-container` |
+| `docker images` | List local images | `docker images` |
+| `docker rmi <image>` | Remove an image | `docker rmi nginx` |
+
 ## Advantages for Technical Writers
 
 Docker is an essential tool for modern Docs-as-Code workflows. It allows writers to run the exact same build tools as developers, ensuring seamless collaboration and predictable deployment results.
