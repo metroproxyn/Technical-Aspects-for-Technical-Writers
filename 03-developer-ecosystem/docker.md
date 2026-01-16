@@ -47,41 +47,53 @@ The same approach applies to the doc-related services, such as running multiple 
 
 To build a foundational understanding of Docker, it is essential to explore its core components in more detail. These concepts form the backbone of how Docker operates, enabling efficient containerization. Below, each is expanded with definitions, practices, and applications tailored for documenting container-based systems.
 
-### **Images**
+### Images
 
-Docker images are immutable, layered filesystems that serve as blueprints for containers. Each layer represents a change or addition (e.g., installing a package), built incrementally for efficiency. This layering allows Docker to cache unchanged parts during rebuilds, speeding up development cycles.
-Building and Registries: Images are created using a Dockerfile or pulled from registries like Docker Hub, Amazon ECR, or Google Artifact Registry. For security, always use official or verified images to avoid vulnerabilities. In documentation, emphasize scanning images with tools like Trivy or Clair to highlight best practices.
-Use Cases for Technical Writers: Images enable reproducible setups for documentation generation; for example, create a custom image with Pandoc and LaTeX for converting Markdown to PDF. This ensures consistent output across teams. Tip: Document image tags (e.g., nginx:alpine) to specify versions and avoid breaking changes.
+- **Definition and Structure:** Docker images are immutable, layered filesystems that serve as blueprints for containers. Each layer represents a change or addition (e.g., installing a package), built incrementally for efficiency. This layering allows Docker to cache unchanged parts during rebuilds, speeding up development cycles.
 
-### **Containers**
+- **Building and Registries:** Images are created using a Dockerfile or pulled from registries like Docker Hub, Amazon ECR, or Google Artifact Registry. For security, always use official or verified images to avoid vulnerabilities. In documentation, emphasize scanning images with tools like Trivy or Clair to highlight best practices.
 
-Lifecycle and Management: Containers have states like created, running, paused, stopped, and exited. They start quickly (often in seconds) because they leverage the host's kernel via namespaces and cgroups for isolation. Use commands like docker inspect <container_id> to view details such as environment variables or mounted volumes.
-Resource Control and Security: Limit CPU, memory, and I/O with flags like --cpus=2 or --memory=512m during docker run. For security, run as non-root users with --user and enable seccomp profiles. This is crucial in docs for enterprise environments to prevent privilege escalation.
-Use Cases for Technical Writers: Containers are ideal for testing documentation in isolated environments, e.g., running a containerized API server to verify endpoint examples. In guides, include troubleshooting tips like checking logs with docker logs -f <container_id> to help users debug issues independently.
+- **Use Cases for Technical Writers:** Images enable reproducible setups for documentation generation; for example, create a custom image with Pandoc and LaTeX for converting Markdown to PDF. This ensures consistent output across teams. Tip: Document image tags (e.g., `nginx:alpine`) to specify versions and avoid breaking changes.
 
-### **Dockerfile**
+### Containers
 
-Syntax and Best Practices: A Dockerfile uses instructions like FROM (base image), RUN (execute commands), COPY/ADD (add files), ENV (set variables), EXPOSE (ports), and CMD/ENTRYPOINT (default commands). Optimize by minimizing layers (combine RUN statements) and using multi-stage builds to reduce final image size.
-Building Process: Run docker build with options like --no-cache for fresh builds or --build-arg for dynamic values. Version control Dockerfiles in Git to track changes, which is essential for audits in regulated industries.
-Use Cases for Technical Writers: Dockerfiles are key for documenting build processes; provide annotated examples in your guides, showing how to handle secrets (use --secret instead of hardcoding). This helps writers create self-contained tutorials, e.g., for setting up a documentation site with Hugo in a container.
+- **Lifecycle and Management:** Containers have states like created, running, paused, stopped, and exited. They start quickly (often in seconds) because they leverage the host's kernel via namespaces and cgroups for isolation. Use commands like `docker inspect <container_id>` to view details such as environment variables or mounted volumes.
 
-### **Volumes**
+- **Resource Control and Security:** Limit CPU, memory, and I/O with flags like `--cpus=2` or `--memory=512m` during `docker run`. For security, run as non-root users with `--user` and enable seccomp profiles. This is crucial in docs for enterprise environments to prevent privilege escalation.
 
-Types and Persistence: Volumes come in named volumes (managed by Docker), bind mounts (host directories), or tmpfs (in-memory). They persist data beyond container lifecycles, solving issues like database state loss. Use docker volume create for named volumes and inspect with docker volume ls.
-Backup and Sharing: Volumes can be shared across containers for data consistency, but back them up regularly using tools like docker cp or third-party solutions. In multi-host setups (e.g., with Swarm), consider network-attached storage for portability.
-Use Cases for Technical Writers: For documentation involving stateful apps (e.g., a CMS like WordPress), explain volume mounting in deployment guides to ensure data integrity. Tip: Document volume paths clearly, as mismatches can cause errors; this prevents common pitfalls in user instructions.
+- **Use Cases for Technical Writers:** Containers are ideal for testing documentation in isolated environments, e.g., running a containerized API server to verify endpoint examples. In guides, include troubleshooting tips like checking logs with `docker logs -f <container_id>` to help users debug issues independently.
 
-### **Networks**
+### Dockerfile
 
-Types and Configuration: Docker offers bridge (default for single-host), host (shares host network), overlay (for multi-host like Swarm), and macvlan (direct hardware access). Custom networks allow defining subnets and gateways; connect containers with docker network connect.
-Communication and Security: Containers on the same network can communicate via container names as DNS (e.g., ping from one to another). Secure with network policies in orchestrators or by isolating sensitive services. Avoid exposing unnecessary ports to minimize attack surfaces.
-Use Cases for Technical Writers: In microservices documentation, describe networks for inter-service communication, e.g., a frontend container talking to a backend API. Include diagrams (using tools like draw.io) in your knowledge base to visualize setups, making complex architectures more approachable.
+- **Syntax and Best Practices:** A Dockerfile uses instructions like `FROM` (base image), `RUN` (execute commands), `COPY/ADD` (add files), `ENV` (set variables), `EXPOSE` (ports), and `CMD/ENTRYPOINT` (default commands). Optimize by minimizing layers (combine `RUN` statements) and using multi-stage builds to reduce final image size.
 
-### **Docker Compose**
+- **Building Process:** Run `docker build` with options like `--no-cache` for fresh builds or `--build-arg` for dynamic values. Version control Dockerfiles in Git to track changes, which is essential for audits in regulated industries.
 
-YAML Structure: The docker-compose.yml file defines services (containers), networks, volumes, and dependencies. Key keys include services (with image, ports, volumes), networks, and volumes. Use version: '3.8' for compatibility.
-Commands and Orchestration: Run docker-compose up -d to start in detached mode, down to stop, or logs for monitoring. It supports environment files (.env) for secrets and overrides for different environments (e.g., dev vs. prod).
-Use Cases for Technical Writers: Compose simplifies documenting multi-container apps, like a stack with Nginx, Python app, and PostgreSQL. In guides, show how to scale services (docker-compose up --scale web=3) and integrate with CI/CD, helping writers cover end-to-end workflows efficiently.
+- **Use Cases for Technical Writers:** Dockerfiles are key for documenting build processes; provide annotated examples in your guides, showing how to handle secrets (use `--secret` instead of hardcoding). This helps writers create self-contained tutorials, e.g., for setting up a documentation site with Hugo in a container.
+
+### Volumes
+
+- **Types and Persistence:** Volumes come in named volumes that are managed by Docker, bind mounts (host directories), or in-memory tmpfs. They persist data beyond container lifecycles, solving issues like database state loss. Use `docker volume` create for named volumes and inspect with `docker volume ls`.
+
+- **Backup and Sharing:** Volumes can be shared across containers for data consistency, but back them up regularly using tools like `docker cp` or third-party solutions. In multi-host setups (e.g., with Swarm), consider network-attached storage for portability.
+
+- **Use Cases for Technical Writers:** For documentation involving stateful apps (e.g., a CMS like WordPress), explain volume mounting in deployment guides to ensure data integrity. Tip: Document volume paths clearly, as mismatches can cause errors; this prevents common pitfalls in user instructions.
+
+### Networks
+
+- **Types and Configuration:** Docker offers bridge (default for single-host), host (shares host network), overlay (for multi-host like Swarm), and macvlan (direct hardware access). Custom networks allow defining subnets and gateways; connect containers with `docker network connect`.
+
+- **Communication and Security:** Containers on the same network can communicate via container names as DNS (e.g., ping from one to another). Secure with network policies in orchestrators or by isolating sensitive services. Avoid exposing unnecessary ports to minimize attack surfaces.
+
+- **Use Cases for Technical Writers:** In microservices documentation, describe networks for inter-service communication, e.g., a frontend container talking to a backend API. Include diagrams (using tools like draw.io) in your knowledge base to visualize setups, making complex architectures more approachable.
+
+### Docker Compose
+
+- **YAML Structure:** The `docker-compose.yml` file defines services (containers), networks, volumes, and dependencies. Key keys include `services` (with `image`, `ports`, `volumes`), `networks`, and `volumes`. Use `version: '3.8'` for compatibility.
+
+- **Commands and Orchestration:** Run `docker-compose up -d` to start in detached mode, `down` to stop, or `logs` for monitoring. It supports environment files (`.env`) for secrets and overrides for different environments (e.g., dev vs. prod).
+
+- **Use Cases for Technical Writers:** Compose simplifies documenting multi-container apps, like a stack with Nginx, Python app, and PostgreSQL. In guides, show how to scale services (`docker-compose up --scale web=3`) and integrate with CI/CD, helping writers cover end-to-end workflows efficiently.
 
 ## How Docker Works: A Simple Workflow
 
@@ -91,14 +103,14 @@ Understanding Docker's workflow is key to grasping its practical application. Th
 
 Prerequisites: Ensure your system meets requirements (e.g., Windows 10/11 Pro with WSL2 for Windows, or a modern Linux kernel). Download Docker Desktop from docker.com for Mac/Windows, or use package managers like apt/yum for Linux servers.
 Verification: After installation, run docker --version in your terminal to confirm. If issues arise (e.g., permission errors on Linux), add your user to the docker group with sudo usermod -aG docker $USER and restart your session.
-Tip for Writers: Document platform-specific installation steps in your guides to avoid user frustration; include screenshots or links to official install docs.
+Tip for Writers: Document platform-specific installation steps in your guides to avoid user frustration; include screenshots or links to official install documentation.
 
 **Build an Image**
 
 Dockerfile Preparation: Start with a minimal Dockerfile in your project root. Test syntax with tools like Hadolint for linting.
 Command Execution: Use docker build -t my-app:1.0 . (the dot specifies the build context). Add --progress=plain for detailed output or --no-cache if dependencies change frequently.
 Error Handling: Common issues include missing files (check paths in COPY) or network errors during package installs—advise users to check logs with docker build --progress=plain.
-Tip for Writers: Explain tagging strategies (e.g., semantic versioning) in docs to promote maintainability.
+Tip for Writers: Explain tagging strategies (e.g., semantic versioning) in documentation to promote maintainability.
 
 **Run a Container**
 
@@ -106,7 +118,7 @@ Basic Run: docker run -d --name my-container -p 8080:80 my-app:1.0 detaches the 
 Interactive Mode: For debugging, use docker run -it my-app:1.0 /bin/sh to enter a shell inside the container.
 Environment Variables: Pass vars with -e VAR_NAME=value for configuration without hardcoding.
 Error Handling: If ports conflict, use docker ps to identify and stop running containers. For "image not found" errors, ensure the tag matches.
-Tip for Writers: Include curl examples (e.g., curl localhost:8080) in docs to verify the running app, making tutorials interactive.
+Tip for Writers: Include curl examples (e.g., curl localhost:8080) in documentation to verify the running app, making tutorials interactive.
 
 **Manage Containers**
 
