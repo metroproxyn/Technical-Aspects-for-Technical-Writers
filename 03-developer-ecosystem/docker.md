@@ -99,41 +99,56 @@ To build a foundational understanding of Docker, it is essential to explore its 
 
 Understanding Docker's workflow is key to grasping its practical application. This section outlines a step-by-step process from installation to management, providing a clear path for beginners while highlighting integration opportunities for technical documentation.
 
-**Install Docker**
+### Install Docker
 
-Prerequisites: Ensure your system meets requirements (e.g., Windows 10/11 Pro with WSL2 for Windows, or a modern Linux kernel). Download Docker Desktop from docker.com for Mac/Windows, or use package managers like apt/yum for Linux servers.
-Verification: After installation, run docker --version in your terminal to confirm. If issues arise (e.g., permission errors on Linux), add your user to the docker group with sudo usermod -aG docker $USER and restart your session.
-Tip for Writers: Document platform-specific installation steps in your guides to avoid user frustration; include screenshots or links to official install documentation.
+- **Prerequisites:** Ensure your system meets requirements (e.g., Windows 10/11 Pro with WSL2 for Windows, or a modern Linux kernel). Download Docker Desktop from docker.com for Mac/Windows, or use package managers like apt/yum for Linux servers.
 
-**Build an Image**
+- **Verification:** After installation, run `docker --version` in your terminal to confirm. If issues arise (e.g., permission errors on Linux), add your user to the docker group with `sudo usermod -aG docker $USER` and restart your session.
 
-Dockerfile Preparation: Start with a minimal Dockerfile in your project root. Test syntax with tools like Hadolint for linting.
-Command Execution: Use docker build -t my-app:1.0 . (the dot specifies the build context). Add --progress=plain for detailed output or --no-cache if dependencies change frequently.
-Error Handling: Common issues include missing files (check paths in COPY) or network errors during package installs—advise users to check logs with docker build --progress=plain.
-Tip for Writers: Explain tagging strategies (e.g., semantic versioning) in documentation to promote maintainability.
+- **Tip for Writers:** Document platform-specific installation steps in your guides to avoid user frustration; include screenshots or links to official install documentation.
 
-**Run a Container**
+### Build an Image
 
-Basic Run: docker run -d --name my-container -p 8080:80 my-app:1.0 detaches the process, names it, and maps ports (host:container).
-Interactive Mode: For debugging, use docker run -it my-app:1.0 /bin/sh to enter a shell inside the container.
-Environment Variables: Pass vars with -e VAR_NAME=value for configuration without hardcoding.
-Error Handling: If ports conflict, use docker ps to identify and stop running containers. For "image not found" errors, ensure the tag matches.
-Tip for Writers: Include curl examples (e.g., curl localhost:8080) in documentation to verify the running app, making tutorials interactive.
+- **Dockerfile Preparation:** Start with a minimal Dockerfile in your project root. Test syntax with tools like Hadolint for linting.
+Command Execution: Use `docker build -t my-app:1.0 .` (the dot specifies the build context). Add `--progress=plain` for detailed output or `--no-cache` if dependencies change frequently.
 
-**Manage Containers**
+- **Error Handling:** Common issues include missing files (check paths in COPY) or network errors during package installs—advise users to check logs with `docker build --progress=plain`.
 
-Monitoring: docker ps -a lists all containers; docker stats shows real-time resource usage.
-Logs and Debugging: docker logs -f --tail 100 my-container tails recent logs; use docker exec -it my-container sh to run commands inside a running container.
-Cleanup: docker stop my-container && docker rm my-container for removal; prune unused resources with docker system prune.
-Tip for Writers: Cover logging in docs, as it's vital for troubleshooting—recommend structured logging formats like JSON for easier parsing.
+- **Tip for Writers:** Explain tagging strategies (e.g., semantic versioning) in documentation to promote maintainability.
 
-**Push and Pull Images**
+### Run a Container
 
-Registry Login: docker login for Docker Hub or other registries; use tokens for security.
-Pushing: Tag with registry prefix (e.g., docker tag my-app:1.0 username/my-app:1.0) then docker push username/my-app:1.0.
-Pulling: docker pull username/my-app:1.0 to fetch; useful in CI/CD for consistent builds.
-Error Handling: Handle authentication failures by regenerating tokens; for large images, optimize layers to reduce push times.
-Tip for Writers: Document private registries (e.g., in enterprise settings) and security scanning before pushing.
+- **Basic Run:** `docker run -d --name my-container -p 8080:80 my-app:1.0` detaches the process, names it, and maps ports (`host:container`).
+
+- **Interactive Mode:** For debugging, use `docker run -it my-app:1.0 /bin/sh` to enter a shell inside the container.
+
+- **Environment Variables:** Pass vars with `-e VAR_NAME=value` for configuration without hardcoding.
+
+- **Error Handling:** If ports conflict, use docker ps to identify and stop running containers. For "image not found" errors, ensure the tag matches.
+
+- **Tip for Writers:** Include curl examples (e.g., `curl localhost:8080`) in documentation to verify the running app, making tutorials interactive.
+
+### Manage Containers
+
+- **Monitoring:** `docker ps -a` lists all containers; `docker stats` shows real-time resource usage.
+
+- **Logs and Debugging:** `docker logs -f --tail 100 my-container` tails recent logs; use `docker exec -it my-container sh` to run commands inside a running container.
+
+- **Cleanup:** `docker stop my-container && docker rm my-container` for removal; prune unused resources with docker system prune.
+
+- **Tip for Writers:** Cover logging in docs, as it's vital for troubleshooting—recommend structured logging formats like JSON for easier parsing.
+
+### Push and Pull Images
+
+- **Registry Login:** `docker login` for Docker Hub or other registries; use tokens for security.
+
+- **Pushing:** Tag with registry prefix (e.g., `docker tag my-app:1.0 username/my-app:1.0`) then `docker push username/my-app:1.0`.
+
+- **Pulling:** `docker pull username/my-app:1.0` to fetch; useful in CI/CD for consistent builds.
+
+- **Error Handling:** Handle authentication failures by regenerating tokens; for large images, optimize layers to reduce push times.
+
+- **Tip for Writers:** Document private registries (e.g., in enterprise settings) and security scanning before pushing.
 
 For a hands-on example, extend the hello-world test to a simple web server:
 
