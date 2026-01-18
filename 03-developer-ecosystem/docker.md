@@ -20,7 +20,7 @@ For example, a team developing a microservice might face bugs on macOS that don'
 
 ### Isolation
 
-Containers run in isolated namespaces, preventing interference between apps or with the host. This includes process, network, and filesystem isolation, managed by Docker's use of Linux kernel features like ```cgroups```.
+Containers run in isolated namespaces, preventing interference between apps or with the host. This includes process, network, and filesystem isolation, managed by Docker's use of Linux kernel features like `cgroups`.
 
 For example, you are running multiple versions of a database (PostgreSQL 12 and 14) side-by-side without conflicts, ideal for testing upgrades. As a technical writer, you can isolate documentation tools to avoid version clashes. As a solution, containerize one instance of AsciiDoctor for legacy documentation and another for modern version, ensuring clean and independent builds in your workflow.
 
@@ -179,15 +179,15 @@ Docker is an essential tool for modern Docs-as-Code workflows. It allows writers
 
 **Documenting Containerized Apps**
 
-Docker standardizes environments, allowing you to provide precise, reproducible instructions. For instance, create a Docker-based setup for API documentation where users run ```docker run -p 3000:3000 my-api-docs``` to launch Swagger UI locally. This reduces setup variability and enhances user experience. 
+Docker standardizes environments, allowing you to provide precise, reproducible instructions. For instance, create a Docker-based setup for API documentation where users run `docker run -p 3000:3000 my-api-docs` to launch Swagger UI locally. This reduces setup variability and enhances user experience. 
 
 **Reproducible Environments**
 
-Eliminate environmental discrepancies when generating or testing documentation. Use Docker to containerize tools like Sphinx for Python documentation or Jekyll for static sites: build an image with all dependencies, ensuring consistent builds across CI/CD or team machines. Example: A Dockerfile for MkDocs could include ```pip install mkdocs mkdocs-material ``` for themed documentation sites. Benefit: Faster onboarding for new writers.
+Eliminate environmental discrepancies when generating or testing documentation. Use Docker to containerize tools like Sphinx for Python documentation or Jekyll for static sites: build an image with all dependencies, ensuring consistent builds across CI/CD or team machines. Example: A Dockerfile for MkDocs could include `pip install mkdocs mkdocs-material` for themed documentation sites. Benefit: Faster onboarding for new writers.
 
 **Integration with CI/CD**
 
-Docker shines in automated pipelines, which you can document for dev teams. In GitHub Actions, use Docker to build and test documentation: a workflow yaml might run ```docker build -t docs-builder```. then generate HTML outputs. This ensures documentation is always up-to-date with code changes. Tip: Explain caching in CI to speed up builds, reducing pipeline times.
+Docker shines in automated pipelines, which you can document for dev teams. In GitHub Actions, use Docker to build and test documentation: a workflow yaml might run `docker build -t docs-builder`. then generate HTML outputs. This ensures documentation is always up-to-date with code changes. Tip: Explain caching in CI to speed up builds, reducing pipeline times.
 
 **Isolation for Testing**
 

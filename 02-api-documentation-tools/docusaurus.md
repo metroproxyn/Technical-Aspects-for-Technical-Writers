@@ -37,7 +37,7 @@ description: A brief overview
 ---
 ```
 
-Configuration is centralized in ```docusaurus.config.js``` (or .ts), exporting an object with site metadata, themes, plugins, and presets:
+Configuration is centralized in `docusaurus.config.js` (or .ts), exporting an object with site metadata, themes, plugins, and presets:
 
 ```js
 module.exports = {
@@ -51,15 +51,15 @@ module.exports = {
 
 **Generating the Site**
 
-The build process parses files via Babel and Remark, applies React wrappers for layout (e.g., adding sidebars), and outputs optimized HTML, JS bundles, and CSS. Run ```npx docusaurus build``` to generate the ```/build``` directory with static files. For development, ```npx docusaurus start``` spins up a Webpack dev server on localhost:3000 with hot module replacement (HMR) for instant updates. Builds leverage SWC for faster compilation, reducing times by up to 70% compared to Babel alone.
+The build process parses files via Babel and Remark, applies React wrappers for layout (e.g., adding sidebars), and outputs optimized HTML, JS bundles, and CSS. Run `npx docusaurus build` to generate the `/build` directory with static files. For development, `npx docusaurus start` spins up a Webpack dev server on localhost:3000 with hot module replacement (HMR) for instant updates. Builds leverage SWC for faster compilation, reducing times by up to 70% compared to Babel alone.
 
 **Key Components**
 
-- **Docs Plugin (@docusaurus/plugin-docs):** Manages ```/docs``` folder content. It auto-generates sidebars from file structure (e.g., folders become categories), supports versioning (e.g., ```version: '2.0'``` in frontmatter), and enables pagination for long docs lists. Example of the configuration: docs: ```{ sidebarPath: 'sidebars.js', routeBasePath: '/' }```.
-- **Blog Plugin (@docusaurus/plugin-blog):** Handles ```/blog``` posts with date-based slugs, RSS/Atom feeds, and tags. Supports truncation for previews and authors metadata.
-- **Pages Plugin (@docusaurus/plugin-pages):** Creates custom routes with pure React components in ```/src/pages```, e.g., a landing page at ```/```.
-- **Themes:** Core is ```@docusaurus/theme-classic```, providing Infima CSS for styling, Algolia/DocSearch integration, navbar/footer customization, and dark/light mode toggling via localStorage.
-- **Presets:** ```@docusaurus/preset-classic``` bundles docs, blog, and theme plugins for one-line setup: ```presets: [['classic', { docs: { ... } }]]```.
+- **Docs Plugin (@docusaurus/plugin-docs):** Manages `/docs` folder content. It auto-generates sidebars from file structure (e.g., folders become categories), supports versioning (e.g., `version: '2.0'` in frontmatter), and enables pagination for long docs lists. Example of the configuration: docs: `{ sidebarPath: 'sidebars.js', routeBasePath: '/' }`.
+- **Blog Plugin (@docusaurus/plugin-blog):** Handles `/blog` posts with date-based slugs, RSS/Atom feeds, and tags. Supports truncation for previews and authors metadata.
+- **Pages Plugin (@docusaurus/plugin-pages):** Creates custom routes with pure React components in `/src/pages`, e.g., a landing page at `/`.
+- **Themes:** Core is `@docusaurus/theme-classic`, providing Infima CSS for styling, Algolia/DocSearch integration, navbar/footer customization, and dark/light mode toggling via localStorage.
+- **Presets:** `@docusaurus/preset-classic` bundles docs, blog, and theme plugins for one-line setup: `presets: [['classic', { docs: { ... } }]]`.
 
 This plugin-based architecture, built on Webpack and React Router, greatly ensures scalability. Sites with 10,000+ pages build in under 5 minutes on modern hardware.
 
@@ -72,64 +72,64 @@ Setting up Docusaurus is straightforward for Node.js users. This process require
 Follow the steps to install Docusaurus locally:
 
 1. Install Node.js v18+ (LTS recommended for stability; use nvm for version management).
-2. Bootstrap a site: ```npx create-docusaurus@latest my-site classic --typescript``` (adds TypeScript support; omit for JS).
-3 This scaffolds folders: ```/docs``` for content, ```/src``` for custom code, ```/static``` for assets like images.
-4. Navigate: ```cd my-site``` and launch dev server: ```npm run start``` (or ```yarn start```)
+2. Bootstrap a site: `npx create-docusaurus@latest my-site classic --typescript` (adds TypeScript support; omit for JS).
+3 This scaffolds folders: `/docs` for content, `/src` for custom code, `/static` for assets like images.
+4. Navigate: `cd my-site` and launch dev server: `npm run start` (or `yarn start`)
 5. After that, open http://localhost:3000.
 
 Refer to the [official Docusaurus website](https://docusaurus.io/docs/installation) for complete information about installation.
 
 **Integration with Existing Projects**
 
-To add your Docusaurus project into the existing Git repository, add as a subdirectory (e.g., ```/docs-site```), commit, and use Git submodules for separation: ```git submodule add https://github.com/my-org/docs```.
+To add your Docusaurus project into the existing Git repository, add as a subdirectory (e.g., `/docs-site`), commit, and use Git submodules for separation: `git submodule add https://github.com/my-org/docs`.
 
 **Customization**
 
 To add content related with your API documentation workflow, follow the steps: 
 
-1. Install ```@docusaurus/plugin-openapi-docs``` via ```npm i @docusaurus/plugin-openapi-docs```.
+1. Install `@docusaurus/plugin-openapi-docs` via `npm i @docusaurus/plugin-openapi-docs`.
 
-2. Configure the following: ```plugins: [['openapi-docs', { id: 'api', docsPluginId: 'api', config: { petstore: { specPath: 'openapi.yaml' } } }]]```. 
+2. Configure the following: `plugins: [['openapi-docs', { id: 'api', docsPluginId: 'api', config: { petstore: { specPath: 'openapi.yaml' } } }]]`. 
 
 This will generate interactive Swagger-like pages from OpenAPI specs.
 
-For additional customization, you can edit ```docusaurus.config.js``` directly. As an example:
+For additional customization, you can edit `docusaurus.config.js` directly. As an example:
 
-- Set ```title: 'Site Title'```, ```url: 'https://mysite.com'```, ```favicon: 'img/favicon.ico'```. For styling, override Infima variables in ```src/css/custom.css``` (e.g., ```--ifm-color-primary: #25c2a0;```). 
-- Create custom themes by swizzling: ```npx docusaurus swizzle @docusaurus/theme-classic Navbar -- --eject```, then modify the ejected component. 
-- Add plugins via npm: ```npm i @docusaurus/plugin-google-analytics``` for tracking, or ```@algolia/docusaurus-theme-search-algolia``` for advanced search with API key setup in config.
+- Set `title: 'Site Title'`, `url: 'https://mysite.com'`, `favicon: 'img/favicon.ico'`. For styling, override Infima variables in `src/css/custom.css` (e.g., `--ifm-color-primary: #25c2a0;`). 
+- Create custom themes by swizzling: `npx docusaurus swizzle @docusaurus/theme-classic Navbar -- --eject`, then modify the ejected component. 
+- Add plugins via npm: `npm i @docusaurus/plugin-google-analytics` for tracking, or `@algolia/docusaurus-theme-search-algolia` for advanced search with API key setup in config.
 
 ## Workflow for Documentation
 
 Docusaurus supports a docs-as-code approach, enabling technical writers to iterate quickly while collaborating with developers.
 
-**Creating Content:** Draft in Markdown or MDX files under ```/docs``` for guides or ```/blog``` for announcements. Include frontmatter keys like ```keywords: ['api', 'tutorial']``` for SEO, ```sidebar_label: 'Quick Start'``` for navigation, and ```hide_table_of_contents: true``` for focused pages. Embed MDX components such as ```<Admonition type="tip">Note here</Admonition>``` for callouts or custom React imports for interactive demos.
+**Creating Content:** Draft in Markdown or MDX files under `/docs` for guides or `/blog` for announcements. Include frontmatter keys like `keywords: ['api', 'tutorial']` for SEO, `sidebar_label: 'Quick Start'` for navigation, and `hide_table_of_contents: true` for focused pages. Embed MDX components such as `<Admonition type="tip">Note here</Admonition>` for callouts or custom React imports for interactive demos.
 
 **Testing and Validation:** Run local previews to inspect rendering, using browser dev tools to verify mobile responsiveness and search functionality. Integrate linters like Markdownlint via extensions to catch inconsistencies; test API embeds by loading OpenAPI files and executing sample requests in the generated UI.
 
-**Publication and Versioning:** Generate static files and push to hosting, with scripts for automated deploys on merges. For API updates, create versioned docs by ```running npx docusaurus docs:version 2.0``` to freeze current content, then edit the ```next``` branch for changes—link between versions with frontmatter like ```next: '/next/path'```.
+**Publication and Versioning:** Generate static files and push to hosting, with scripts for automated deploys on merges. For API updates, create versioned docs by `running npx docusaurus docs:version 2.0` to freeze current content, then edit the `next` branch for changes—link between versions with frontmatter like `next: '/next/path'`.
 
-**Collaboration and Iteration:** Branch for features (e.g., ```git checkout -b update-api-guide```), commit granular changes, and open PRs with previews via deploy-preview links. Review feedback inline on GitHub, merge, and monitor analytics plugins to refine high-traffic pages based on user dwell time.
+**Collaboration and Iteration:** Branch for features (e.g., `git checkout -b update-api-guide`), commit granular changes, and open PRs with previews via deploy-preview links. Review feedback inline on GitHub, merge, and monitor analytics plugins to refine high-traffic pages based on user dwell time.
 
-**Maintenance and Scaling:** Handle multilingual content by enabling i18n, translating files into locale folders (e.g., ```/i18n/fr/docs```), and configuring routes. For large sites, optimize with lazy-loading images via ```loading: 'lazy'``` attributes and split content into sub-sites if navigation grows complex.
+**Maintenance and Scaling:** Handle multilingual content by enabling i18n, translating files into locale folders (e.g., `/i18n/fr/docs`), and configuring routes. For large sites, optimize with lazy-loading images via `loading: 'lazy'` attributes and split content into sub-sites if navigation grows complex.
 
 ### Best Practices
 
 Optimize Docusaurus for maintainability and user experience with these targeted strategies.
 
-**Content Structure:** Maintain hierarchy with H1-H6 headings for scannability; use ```tags``` in frontmatter for searchable categories (e.g., ```tags: ['beginner', 'api']```). Incorporate fenced code blocks with language specifiers like ```bash
+**Content Structure:** Maintain hierarchy with H1-H6 headings for scannability; use `tags` in frontmatter for searchable categories (e.g., `tags: ['beginner', 'api']`). Incorporate fenced code blocks with language specifiers like `bash`
 
-**Versioning and Deprecations:** Configure multi-version support in config with ```versions: { current: { label: 'Next' } }```; mark deprecated features using ```<Admonition type="caution">Deprecated in v3</Admonition>```, and provide migration guides linked across versions.
+**Versioning and Deprecations:** Configure multi-version support in config with `versions: { current: { label: 'Next' } }`; mark deprecated features using `<Admonition type="caution">Deprecated in v3</Admonition>`, and provide migration guides linked across versions.
 
-**Accessibility Compliance:** Add descriptive alt text to all images (e.g., ```![Diagram of API flow](img /api-flow.png 'Detailed API request-response cycle')```); validate with tools like Lighthouse audits integrated into CI, ensuring ARIA labels on custom components and keyboard navigation works.
+**Accessibility Compliance:** Add descriptive alt text to all images (e.g., `![Diagram of API flow](img /api-flow.png 'Detailed API request-response cycle')`); validate with tools like Lighthouse audits integrated into CI, ensuring ARIA labels on custom components and keyboard navigation works.
 
-**Performance Tuning:** Compress images in ```/static``` using plugins like ```@docusaurus/plugin-ideal-image```; enable prefetching for links with ```linkPrefetch: true``` in config, and monitor build metrics with ```npm run build -- --profile``` to identify bottlenecks in large MDX files.
+**Performance Tuning:** Compress images in `/static` using plugins like `@docusaurus/plugin-ideal-image`; enable prefetching for links with `linkPrefetch: true` in config, and monitor build metrics with `npm run build -- --profile` to identify bottlenecks in large MDX files.
 
-**Security and SEO:** Sanitize user-generated content if applicable; boost SEO with sitemaps via plugins and canonical URLs in frontmatter. Use ```robots.txt``` in ```/static``` to control crawling.
+**Security and SEO:** Sanitize user-generated content if applicable; boost SEO with sitemaps via plugins and canonical URLs in frontmatter. Use `robots.txt` in `/static` to control crawling.
 
-**Common Pitfalls to Avoid:** Skip heavy custom JS early to prevent bloat—start with presets; run ```markdownlint "**/*.md"``` regularly to enforce style; for scaling, chunk large documentation into partials imported via MDX to keep files under 500 lines.
+**Common Pitfalls to Avoid:** Skip heavy custom JS early to prevent bloat—start with presets; run `markdownlint "**/*.md"` regularly to enforce style; for scaling, chunk large documentation into partials imported via MDX to keep files under 500 lines.
 
-**Leveraging Plugins:** Install ```@docusaurus/plugin-content-docs``` for advanced routing; add community extras like ```docusaurus-mermaid``` for diagrams (e.g., flowchart syntax in code blocks) or ```docusaurus-plugin-embed-twitter``` for social embeds, configuring them minimally to avoid conflicts.
+**Leveraging Plugins:** Install `@docusaurus/plugin-content-docs` for advanced routing; add community extras like `docusaurus-mermaid` for diagrams (e.g., flowchart syntax in code blocks) or `docusaurus-plugin-embed-twitter` for social embeds, configuring them minimally to avoid conflicts.
 
 This workflow and the mentioned tips keeps documentation accurate and accessible, aligning writer tasks with agile development cycles. 
 

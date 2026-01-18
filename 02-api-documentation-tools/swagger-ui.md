@@ -36,7 +36,7 @@ The shift to interactive documentaion engages developers and minimizes errors at
 
 For technical writers focused on API documentation,With Swagger UI, technical writer becoming a collaborator in the API lifecycle, ensuring the triple-A concept on the documentaion: Accurate, Accessible, and Actionable.
 
-API documentation often involve describing complex elements like endpoints ```(/users/{id})```, query parameters, request bodies, and error codes. Swagger UI automates much of this by rendering these from OpenAPI files. This allows technical writers to concentrate on clear descriptions, examples, and use cases. It's particularly useful for RESTful APIs, where visual hierarchy, such as grouped operations makes navigation more intuitive.
+API documentation often involve describing complex elements like endpoints `(/users/{id})`, query parameters, request bodies, and error codes. Swagger UI automates much of this by rendering these from OpenAPI files. This allows technical writers to concentrate on clear descriptions, examples, and use cases. It's particularly useful for RESTful APIs, where visual hierarchy, such as grouped operations makes navigation more intuitive.
 
 **Advantages**
 
@@ -82,15 +82,15 @@ Getting started with Swagger UI is quite straightforward, whether for local test
 
 **Local Installation**
 
-- **Via npm:** Run n```pm install swagger-ui-dist``` for the core files.
-- **Docker:** Pull the image with ```docker pull swaggerapi/swagger-ui``` and run ```docker run -p 8080:8080 swaggerapi/swagger-ui```.
+- **Via npm:** Run `npm install swagger-ui-dist` for the core files.
+- **Docker:** Pull the image with `docker pull swaggerapi/swagger-ui` and run `docker run -p 8080:8080 swaggerapi/swagger-ui`.
 - **Direct Download:** Grab the dist folder from GitHub for static hosting.
 
-Point it to your OpenAPI file, for example, via environment variable ```URL=/path/to/spec.yaml```.
+Point it to your OpenAPI file, for example, via environment variable `URL=/path/to/spec.yaml`.
 
 **Integration with Projects**
 
-- **Node.js:** Use ```swagger-ui-express``` middleware.
+- **Node.js:** Use `swagger-ui-express` middleware.
 - **Java/Spring:** Integrate with Springdoc or Swashbuckle.
 - **Python:** Leverage Connexion or FastAPI's built-in support.
 
@@ -102,7 +102,7 @@ Refer to the [official Swagger UI website](https://swagger.io/tools/swagger-ui/)
 
 As a technical writer, your usage of Swagger UI will looks as follows:
 
-- Creating Specifications: Use Swagger Editor or VS Code extensions (such as OpenAPI (Swagger) Editor) to draft YAML/JSON.Focus on descriptive fields like ```summary``` and ```description.```
+- Creating Specifications: Use Swagger Editor or VS Code extensions (such as OpenAPI (Swagger) Editor) to draft YAML/JSON.Focus on descriptive fields like `summary` and `description.`
 - Testing: Load the spec into Swagger UI to validate. AFter that, execute calls and check for spec errors.
 - Publishing: Deploy via GitHub Pages, Docusaurus, or embed in your app. Automate with CI/CD for instant updates if needed.
 - Collaborating: Treat specidications as code—use pull requests for reviews, aligning with the Docs-as-Code principles.

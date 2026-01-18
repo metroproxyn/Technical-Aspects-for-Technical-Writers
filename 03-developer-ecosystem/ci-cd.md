@@ -58,11 +58,11 @@ The system pulls the latest version of your repository. This ensures it always w
 
 **Dependencies Installation**
 
-Next, install any required software. For a Hugo-based site, this might mean running ```apt install hugo``` or ```npm install``` for Node.js dependencies in Docusaurus. What for? Your local machine has these, but the cloud runner starts fresh each time. This step prevents "missing tool" failures and keeps environments consistent.
+Next, install any required software. For a Hugo-based site, this might mean running `apt install hugo` or `npm install` for Node.js dependencies in Docusaurus. What for? Your local machine has these, but the cloud runner starts fresh each time. This step prevents "missing tool" failures and keeps environments consistent.
 
 **Build**
 
-Here the system tries to generate your site, and Markdown files are converted to HTML. For Markdown docs, this could be ```hugo build``` or ```mkdocs build``` commands. If something fundamental is broken, the build fails immediately. This is your first quality check, ensuring the basics work before deeper tests.
+Here the system tries to generate your site, and Markdown files are converted to HTML. For Markdown docs, this could be `hugo build` or `mkdocs build` commands. If something fundamental is broken, the build fails immediately. This is your first quality check, ensuring the basics work before deeper tests.
 
 **Tests and Quality Checks**
 
@@ -72,7 +72,7 @@ This is where CI/CD really shines for documentation.
 - Link checkers scan for dead URLs.
 - Spellcheckers catch typos and inconsistencies.
 
-These features run in parallel, with YAML defining commands like ```vale .``` or ```markdownlint "**/*.md"```. If any of these checks fail, the pipeline stops. These run in parallel, with YAML defining commands like vale . or markdownlint "**/*.md". Failures provide detailed feedback, acting as your automated editor.
+These features run in parallel, with YAML defining commands like `vale .` or `markdownlint "**/*.md"`. If any of these checks fail, the pipeline stops. These run in parallel, with YAML defining commands like vale . or markdownlint "**/*.md". Failures provide detailed feedback, acting as your automated editor.
 
 **Deployment**
 
