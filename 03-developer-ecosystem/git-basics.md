@@ -38,7 +38,23 @@ Before diving into commands, understand the following core ideas:
 
 ## Setting Up Git
 
+Follow the steps to set up your Git environment.
+
+**Step 1: Installation.** Download the installer from git-scm.com for your OS. On macOS, use Homebrew: `brew install git`. On Linux (Ubuntu/Debian), use: `sudo apt install git`. For Windows, the installer includes Git Bash, a command-line interface. Verify installation by running `git --version` in your terminal—it should display the Git version number.
+
+**Step 2: Configuration.** Set global defaults for your identity (used in commit metadata) and editor. Run these commands:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+git config --global core.editor "nano"  # Or "vim", "code --wait" for VS Code, etc.
+```
+
+**Step 3: Authentication.** For platforms like GitHub, set up SSH for secure, passwordless access (recommended) or use HTTPS with a personal access token. Generate an SSH key with `ssh-keygen -t ed25519 -C "your.email@example.com"`, then add the public key (`~/.ssh/id_ed25519.pub`) to your GitHub account settings. Test with `ssh -T git@github.com`. For HTTPS, create a token in GitHub settings and use it when prompted. Refer to GitHub's official guide: docs.github.com/en/authentication. If using a GUI like GitHub Desktop, it handles much of this automatically.
+
 ## Basic Git Workflow for Technical Writers
+
+Follow the steps for manage documentation workflow with the Git.
 
 ## Best Practices for Technical Writers
 
