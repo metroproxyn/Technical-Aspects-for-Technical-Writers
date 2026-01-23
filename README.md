@@ -38,20 +38,14 @@ I am applying "learning by teaching" method here. It will include material from 
 ### 4. AI in Technical Writing
 *AI tools and workflows for modern technical writing.*
 
-- [Specialized Tools](/04-ai-in-technical-writing/specialized-tools.md)
+- [Specialized Tools](/04-ai-in-technical-writing/specialized-tools.md) (TBD)
 
 ### 5. Enterprise & Collaboration Tools
 *Common tools in a corporate environment.*
 
-- [Content Management with SharePoint](/05-enterprise-tools/sharepoint.md)
+- [Content Management with SharePoint](/05-enterprise-tools/sharepoint.md) (TBD)
 
 ### 6. Related Roles
 *Exploring professions that closely interact with technical writing.*
 
-- [The System Analyst Role](/06-related-roles/system-analyst.md)
-
----
-
-### How to Contribute
-
-(TBD)
+- [The System Analyst Role](/06-related-roles/system-analyst.md) (TBD)
