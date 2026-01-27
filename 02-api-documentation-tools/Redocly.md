@@ -54,7 +54,21 @@ This tool is particularly helpful for technical writers as it streamlines the ma
 
 These components integrate seamlessly, allowing for end-to-end API documentation workflows.
 
-### Redoc (link to redoc material)
+### Redoc
+
+Redoc is an open-source API reference renderer that transforms OpenAPI definitions into interactive, web-ready documentation. It features a modern three-panel layout: navigation on the left, detailed endpoint documentation in the center, and request/response examples on the right. Redoc supports OpenAPI 3.1, 3.0, 2.0, and Swagger formats.
+
+Key features include:
+
+- Auto-generated code samples in multiple languages.
+
+- Support for polymorphism, discriminators, mock servers, and nested schemas with deep links.
+
+- Extensive customization options, such as theme adjustments, hiding sections, or enabling search.
+
+- Integration as a standalone HTML page, React component, or via CLI for building docs.
+
+For example, you can generate documentation using the CLI command: `npx @redocly/cli build-docs openapi.yaml`, which produces a static HTML file. This makes Redoc ideal for embedding API references in websites or portals. See the [Redoc material](/02-api-documentation-tools/Redoc.md) for additional information.
 
 ### Redocly CLI
 
