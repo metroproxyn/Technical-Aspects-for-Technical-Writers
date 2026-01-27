@@ -54,8 +54,50 @@ This tool is particularly helpful for technical writers as it streamlines the ma
 
 These components integrate seamlessly, allowing for end-to-end API documentation workflows.
 
-## Benefits for Technical Writers
-
 ## Getting Started with Redocly
 
-## Conclusion and Futher Resources
+Ensure you have Node.js (v18 or higher) and the latest npm installed. For Docker users, have Docker set up if preferring containerized runs. See the [Docker](/03-developer-ecosystem/docker.md) material for additional information.
+
+### Installation
+
+Install Redocly CLI locally in your project directory for better version control: npm i @redocly/cli@latest. Alternatively, use it at runtime without installation via npx @redocly/cli@latest <command>. Verify the installation by running redocly --version to check the version. For Docker: Pull the image with docker pull redocly/cli and run commands like docker run --rm -v $PWD:/spec redocly/cli lint openapi.yaml.
+
+### Linting an OpenAPI File
+
+Use the lint command to validate your API descriptions and enforce rules: redocly lint openapi.yaml. Customize with options like --format=stylish for readable output or --extends=recommended-strict for stricter rules. Example: redocly lint --config=./redocly.yaml api/*.yaml to lint multiple files using a custom config. Generate an ignore file with --generate-ignore-file to suppress specific issues.
+
+### Building Documentation
+
+Generate a standalone HTML file with redocly build-docs openapi.yaml, outputting to redoc-static.html by default. Customize output: redocly build-docs openapi.yaml -o custom-docs.html --title="My API Docs" --theme.openapi.disableSearch to set a title and hide the search box. Use a custom template with -t custom.hbs for advanced styling.
+
+### Next Steps
+
+Create a simple openapi.yaml file (e.g., with basic info and paths) to test. Explore advanced features by signing up for a Redocly account to access hosted tools like the Developer Portal. Integrate into CI/CD pipelines for automated linting and builds. For full guides, refer to the official documentation or GitHub repositories.
+
+## Benefits for Technical Writers
+
+For technical writers focused on API documentation, Redocly offers several advantages:
+
+- **Efficiency:** Automate updates to API references with minimal manual effort, using docs-as-code to keep documentation in sync with code changes.
+
+- **Quality Assurance:** Built-in linting and governance ensure consistent, high-quality docs that adhere to standards.
+
+- **Collaboration:** Tools like Reunite facilitate team reviews and single-sourcing in Markdown, reducing silos between writers and developers.
+
+- **User Experience:** Generate interactive, searchable docs that improve developer onboarding and API adoption.
+
+- **Flexibility:** Support for local previews, static builds, and integration with CI/CD pipelines aligns with modern tech stacks like Docker and Kubernetes.
+
+## Conclusion
+
+This overview provides a foundational understanding of Redocly, equipping technical writers with the knowledge to incorporate it into their documentation practices.
+
+**Futher Resources**
+
+- Official Website: [Redocly](https://redocly.com/)
+
+- Redoc GitHub: github.com/Redocly/redoc
+
+- Redocly CLI GitHub: github.com/Redocly/redocly-cli
+
+- OpenAPI Initiative: openapi.org
