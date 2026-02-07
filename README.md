@@ -26,8 +26,15 @@ I am applying "learning by teaching" method here. It will include material from 
 - [Swagger UI](/02-api-documentation-tools/swagger-ui.md)
 - [Static Site Generators: Docusaurus](/02-api-documentation-tools/docusaurus.md)
 
+### 2. Static Site Generators
+*Tools for creating, publishing, and managing documentation.*
+
+- [Docusaurus](/02-static-site-generators/docusaurus.md)
+- [MkDocs](/02-static-site-generators/MkDocs.md)
+- [Sphinx](/02-static-site-generators/sphinx.md)
+
 ### 3. The Developer Ecosystem (TBD)
-*Understanding the tools and platforms developers use every day.*
+*Tools and frameworks for transforming plain text into deployed documentation sites.*
 
 - [Version Control with Git](/03-developer-ecosystem/git-basics.md)
 - [CI/CD Pipelines](/03-developer-ecosystem/ci-cd.md)
