@@ -14,7 +14,7 @@ I am applying "learning by teaching" method here. It will include material from 
 - [API Documentation Structure](/01-foundations/API%20Documentation%20Structure.md)
 - [REST API Principles](/01-foundations/Learn%20API%20Technical%20Writing%20REST.md)
 - [Data Formats: JSON & XML](/01-foundations/Learn%20API%20Technical%20Writing%20JSON%20and%20XML.md)
-- [Swagger and OpenAPi Specification](/01-foundations/Learn%20Swagger%20and%20the%20OpenAPI%20Specification.md)
+- [Swagger and OpenAPI Specification](/01-foundations/Learn%20Swagger%20and%20the%20OpenAPI%20Specification.md)
 - [The Art of API Documentation](/01-foundations/The%20Art%20of%20API%20Documentation.md)
 - [The "Docs-as-Code" Approach](/01-foundations/docs-as-code.md)
 
