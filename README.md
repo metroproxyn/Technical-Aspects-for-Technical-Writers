@@ -38,6 +38,7 @@ I am applying "learning by teaching" method here. It will include material from 
 
 - [Version Control with Git](/03-developer-ecosystem/git-basics.md)
 - [CI/CD Pipelines](/03-developer-ecosystem/ci-cd.md)
+- [Jenkins](/03-developer-ecosystem/jenkins.md)
 - [Containerization with Docker](/03-developer-ecosystem/docker.md)
 - [Cloud Computing Basics](/03-developer-ecosystem/cloud-basics.md)
 - [Orchestration with Kubernetes](/03-developer-ecosystem/kubernetes.md)
