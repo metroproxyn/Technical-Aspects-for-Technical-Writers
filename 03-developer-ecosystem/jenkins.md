@@ -48,7 +48,7 @@ The architecture diagram depicts how the Jenkins master coordinates with multipl
 
 ## Plugins
 
-Plugins are the backbone of Jenkins' extensibility. They can be installed via the Jenkins Update Center and cover categories like source control, build tools, notifications, and security. For example:
+Plugins are the backbone of Jenkins extensibility. They can be installed via the Jenkins Update Center and cover categories like source control, build tools, notifications, and security. For example:
 - Git Plugin: Integrates with Git repositories.
 - Pipeline Plugin: Enables Pipeline as Code.
 - Docker Plugin: Builds and deploys Docker images.
@@ -57,7 +57,7 @@ Always keep plugins updated to benefit from security fixes and new features.
 
 ## Jenkinsfile and Pipeline as Code
 
-A **Jenkinsfile** is a Groovy-based script stored in your project's repository that defines the entire pipeline. This "Pipeline as Code" approach allows version control of your automation logic, making it collaborative and reproducible.
+A **Jenkinsfile** is a Groovy-based script stored in your project repository that defines the entire pipeline. This "Pipeline as Code" approach allows version control of your automation logic, making it collaborative and reproducible.
 
 Example of a simple declarative Jenkinsfile:
 
@@ -103,7 +103,7 @@ After installation, access Jenkins at `http://localhost:8080`, unlock it with th
 
 ## Basic Setup and Usage Examples
 
-1. **Create a Pipeline Job**: In the Jenkins UI, select "New Item" > "Pipeline", then point to your repository's Jenkinsfile.
+1. **Create a Pipeline Job**: In the Jenkins UI, select "New Item" > "Pipeline", then point to your repository Jenkinsfile.
 2. **Configure Credentials**: Add API tokens or SSH keys for integrations.
 3. **Run a Build**: Trigger manually or via webhooks from Git.
 4. **Monitor**: Use the dashboard to view build history, logs, and artifacts.
