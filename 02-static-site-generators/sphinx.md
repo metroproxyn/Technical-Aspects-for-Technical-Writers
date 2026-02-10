@@ -2,7 +2,7 @@
 
 Sphinx is an open-source documentation generator widely used in the software development community, particularly for Python projects. Created by Georg Brandl in 2007, it was initially designed to document the Python programming language itself but has since evolved into a versatile tool for creating professional, high-quality documentation for various technical domains. Sphinx excels at transforming plain text markup into multiple output formats, making it an essential tool for technical writers who need to produce clear, navigable, and maintainable documentation.
 
-This guide provides a foundational yet comprehensive overview of Sphinx, focusing on its relevance to technical writing. We'll cover its core features, installation, basic usage, and best practices, assuming a beginner-to-intermediate level of familiarity with Python and markup languages.
+This guide provides a foundational yet comprehensive overview of Sphinx, focusing on its relevance to technical writing. We will cover its core features, installation, basic usage, and best practices, assuming a beginner-to-intermediate level of familiarity with Python and markup languages.
 
 ## Why Use Sphinx for Technical Documentation?
 
@@ -66,7 +66,7 @@ docs/
 ### 3. **Extensions and Themes**
 
 Sphinx is highly extensible:
-- Built-in extensions: `autodoc` (for Python code docs), `doctest` (for testing code examples), `intersphinx` (for linking to external docs like Python's official site).
+- Built-in extensions: `autodoc` (for Python code docs), `doctest` (for testing code examples), `intersphinx` (for linking to external docs like Python official site).
 - Third-party extensions: `sphinxcontrib-plantuml` for diagrams, `sphinx-rtd-theme` for a clean Read the Docs style.
 - Themes: Customize appearance with themes like Alabaster (default) or Sphinx Book Theme for Jupyter-like docs.
 
@@ -164,7 +164,7 @@ Host on platforms like:
 
 ## Potential Drawbacks
 
-- Learning curve for reST if you're used to Markdown.
+- Learning curve for reST if you are used to Markdown.
 - Python dependency might be a barrier for non-developers.
 - Less visual editing compared to tools like MkDocs (which uses Markdown natively).
 
@@ -175,4 +175,4 @@ Host on platforms like:
 - Extensions Gallery: https://sphinx-extensions.readthedocs.io/
 - Community: Stack Overflow tags like [sphinx] or [restructuredtext].
 
-By incorporating Sphinx into your workflow, you can streamline the creation of robust documentation that scales with your projects. This tool bridges the gap between code and content, empowering technical writers to produce outputs that are both technically accurate and user-friendly. If you're expanding your knowledge base, consider pairing this with articles on related tools like Doxygen for C++ docs or Javadoc for Java.
+By incorporating Sphinx into your workflow, you can streamline the creation of robust documentation that scales with your projects. This tool bridges the gap between code and content, empowering technical writers to produce outputs that are both technically accurate and user-friendly. If you are expanding your knowledge base, consider pairing this with articles on related tools like Doxygen for C++ docs or Javadoc for Java.
