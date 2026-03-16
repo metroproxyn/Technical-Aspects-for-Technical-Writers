@@ -1,3 +1,4 @@
+# Microsoft Ecosystem Roadmap for System Analysts & PMs
 
 As a **System Analyst** (new to the role, coming from documentation development), your work likely involves:
 - Analyzing customer environments (their mix of on-prem AD, hybrid sync, pure cloud M365/Entra ID, Azure resources).
