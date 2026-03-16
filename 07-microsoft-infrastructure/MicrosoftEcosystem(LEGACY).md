@@ -33,7 +33,7 @@ You don't need expensive courses or books first—everything is official and pra
    - [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) – Direct comparison to AD DS, tenants, users/groups/roles.
    - [Manage users and groups in Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/manage-users-and-groups-in-aad/) – Hands-on with hybrid basics.
    - [Tutorial: Basic Active Directory environment](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/tutorial-basic-ad-azure) – Literally builds a lab hybrid setup.
-   - [Bonus: Azure Fundamentals (AZ-900)](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification) (optional but not long).
+   - [Bonus: Azure Fundamentals (AZ-900)](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification)
 
    All at: learn.microsoft.com (search the titles). No account needed for most; free sandbox labs included. These are the exact foundations Microsoft recommends for admins moving into hybrid roles.
 
