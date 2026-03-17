@@ -34,7 +34,7 @@ All at: learn.microsoft.com (search the titles). No account needed for most; fre
 
 **MS-900T01-A Course**
 
-- [ ] [MS-900T01-A Course](https://learn.microsoft.com/en-us/training/courses/ms-900t01) started
+- [x] [MS-900T01-A Course](https://learn.microsoft.com/en-us/training/courses/ms-900t01) started
   - [ ] [Introduction to Cloud Infrastructure: Describe cloud concepts](https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/)
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 apps and services](https://learn.microsoft.com/en-us/training/paths/describe-microsoft-365-core-services-concepts/)
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 security and compliance capabilities](https://learn.microsoft.com/en-us/training/paths/m365-security-compliance-capabilities/)
