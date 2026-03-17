@@ -19,6 +19,7 @@ You don't need expensive courses or books; Everything here is official and pract
 - [Manage users and groups in Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/manage-users-and-groups-in-aad/) – Hands-on with hybrid basics.
 - [Tutorial: Basic Active Directory environment](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/tutorial-basic-ad-azure) – Literally builds a lab hybrid setup.
 - [Bonus: Azure Fundamentals (AZ-900)](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification)
+- [Microsoft Graph Fundamentals](https://learn.microsoft.com/en-us/training/paths/m365-msgraph-fundamentals)
 
 All at: learn.microsoft.com (search the titles). No account needed for most; free sandbox labs included. These are the exact foundations Microsoft recommends for admins moving into hybrid roles.
 
@@ -28,7 +29,7 @@ All at: learn.microsoft.com (search the titles). No account needed for most; fre
 - [Microsoft Entra ID (formerly Azure AD)](./entra-id-basics.md)
 - etc.
 
-(future files: conditional-access.md, intune-overview.md, etc.)
+TBD: (future files: conditional-access.md, intune-overview.md, etc.)
 
 ### 🚀 Progress Tracker (updated 17 Mar 2026)
 
