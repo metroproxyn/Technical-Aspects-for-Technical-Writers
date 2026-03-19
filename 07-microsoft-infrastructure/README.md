@@ -20,6 +20,8 @@ You don't need expensive courses or books; Everything here is official and pract
 - [Tutorial: Basic Active Directory environment](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/tutorial-basic-ad-azure) – Literally builds a lab hybrid setup.
 - [Bonus: Azure Fundamentals (AZ-900)](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification)
 - [Microsoft Graph Fundamentals](https://learn.microsoft.com/en-us/training/paths/m365-msgraph-fundamentals)
+- [Introduction to Azure VMware Solution](https://learn.microsoft.com/en-us/training/modules/intro-azure-vmware-solution/)
+
 
 All at: learn.microsoft.com (search the titles). No account needed for most; free sandbox labs included. These are the exact foundations Microsoft recommends for admins moving into hybrid roles.
 
@@ -37,7 +39,7 @@ TBD: (future files: conditional-access.md, intune-overview.md, etc.)
 
 - [x] [MS-900T01-A Course](https://learn.microsoft.com/en-us/training/courses/ms-900t01) started
   - [ ] [Introduction to Cloud Infrastructure: Describe cloud concepts](https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/)
-    - [ ] Describe cloud computing
+    - [x] Describe cloud computing
     - [ ] Describe the benefits of using cloud services
     - [ ] Describe cloud service types
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 apps and services](https://learn.microsoft.com/en-us/training/paths/describe-microsoft-365-core-services-concepts/)
