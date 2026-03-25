@@ -51,7 +51,6 @@ This module covers:
 - Public, private, and hybrid cloud models
 - Consumption-based (pay-as-you-go) pricing vs traditional CapEx
 
-
 **Official resources:**  
 - Full module: https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/
 - Azure Fundamentals learning path
