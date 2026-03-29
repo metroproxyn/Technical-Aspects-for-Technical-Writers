@@ -23,8 +23,6 @@ You don't need expensive courses or books; Everything here is official and pract
 - [Introduction to Azure VMware Solution](https://learn.microsoft.com/en-us/training/modules/intro-azure-vmware-solution/)
 - [Introduction to Azure hybrid cloud services](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-hybrid-services/)
 
-
-
 All at: learn.microsoft.com (search the titles). No account needed for most; free sandbox labs included. These are the exact foundations Microsoft recommends for admins moving into hybrid roles.
 
 ### Table of Contents (*TBD*)
