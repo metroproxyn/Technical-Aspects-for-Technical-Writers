@@ -46,7 +46,7 @@ TBD: (future files: conditional-access.md, intune-overview.md, etc.)
     - [x] Describe cloud service types
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 apps and services](https://learn.microsoft.com/en-us/training/paths/describe-microsoft-365-core-services-concepts/)
     - [x] What is Microsoft 365?
-    - [ ] Describe productivity solutions of Microsoft 365
+    - [x] Describe productivity solutions of Microsoft 365
     - [ ] Describe collaboration solutions of Microsoft 365
     - [ ] Describe the device and cloud endpoint management concepts and deployment options in Microsoft 365
     - [ ] Describe the analytics and administrative capabilities available in Microsoft 365
