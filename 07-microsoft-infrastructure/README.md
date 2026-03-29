@@ -46,7 +46,7 @@ TBD: (future files: conditional-access.md, intune-overview.md, etc.)
     - [x] What is Microsoft 365?
     - [x] Describe productivity solutions of Microsoft 365
     - [x] Describe collaboration solutions of Microsoft 365
-    - [ ] Describe the device and cloud endpoint management concepts and deployment options in Microsoft 365
+    - [x] Describe the device and cloud endpoint management concepts and deployment options in Microsoft 365
     - [ ] Describe the analytics and administrative capabilities available in Microsoft 365
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 security and compliance capabilities](https://learn.microsoft.com/en-us/training/paths/m365-security-compliance-capabilities/)
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 pricing, licensing, and support](https://learn.microsoft.com/en-us/training/paths/m365-licensing-service-support/)
