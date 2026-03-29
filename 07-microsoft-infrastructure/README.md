@@ -35,7 +35,7 @@ All at: learn.microsoft.com (search the titles). No account needed for most; fre
 
 TBD: (future files: conditional-access.md, intune-overview.md, etc.)
 
-### 🚀 Progress Tracker (updated 22 Mar 2026)
+### 🚀 Progress Tracker (updated 29 Mar 2026)
 
 **MS-900T01-A Course**
 
@@ -45,5 +45,10 @@ TBD: (future files: conditional-access.md, intune-overview.md, etc.)
     - [x] Describe the benefits of using cloud services
     - [x] Describe cloud service types
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 apps and services](https://learn.microsoft.com/en-us/training/paths/describe-microsoft-365-core-services-concepts/)
+    - [ ] What is Microsoft 365?
+    - [ ] Describe productivity solutions of Microsoft 365
+    - [ ] Describe collaboration solutions of Microsoft 365
+    - [ ] Describe the device and cloud endpoint management concepts and deployment options in Microsoft 365
+    - [ ] Describe the analytics and administrative capabilities available in Microsoft 365
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 security and compliance capabilities](https://learn.microsoft.com/en-us/training/paths/m365-security-compliance-capabilities/)
   - [ ] [MS-900 Introduction to Microsoft 365: Describe Microsoft 365 pricing, licensing, and support](https://learn.microsoft.com/en-us/training/paths/m365-licensing-service-support/)
